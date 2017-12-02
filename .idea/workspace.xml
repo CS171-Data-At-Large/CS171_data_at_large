@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="663ed40f-7050-4c53-b973-41400f10bb6e" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/identityTheftLineVis.js" afterPath="$PROJECT_DIR$/js/identityTheftLineVis.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/identityTheftVis.js" afterPath="$PROJECT_DIR$/js/identityTheftVis.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viz/breachCasesBubbleVis.js" afterPath="$PROJECT_DIR$/js/viz/breachCasesBubbleVis.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viz/identityTheftLineVis.js" afterPath="$PROJECT_DIR$/js/viz/identityTheftLineVis.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viz/identityTheftVis.js" afterPath="$PROJECT_DIR$/js/viz/identityTheftVis.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viz/timeToResolveVis.js" afterPath="$PROJECT_DIR$/js/viz/timeToResolveVis.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,28 +25,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="228" column="20" lean-forward="false" selection-start-line="228" selection-start-column="20" selection-end-line="228" selection-end-column="20" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="internetUseMapVis.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/internetUseMapVis.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1355">
-              <caret line="183" column="13" lean-forward="true" selection-start-line="183" selection-start-column="13" selection-end-line="183" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="identityTheftVis.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/identityTheftVis.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="26" column="26" lean-forward="false" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+            <state relative-caret-position="381">
+              <caret line="325" column="36" lean-forward="false" selection-start-line="325" selection-start-column="36" selection-end-line="325" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -52,30 +35,18 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="494">
-              <caret line="511" column="18" lean-forward="false" selection-start-line="511" selection-start-column="18" selection-end-line="511" selection-end-column="18" />
+            <state relative-caret-position="324">
+              <caret line="503" column="0" lean-forward="true" selection-start-line="503" selection-start-column="0" selection-end-line="503" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="breachCasesBubbleVis.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/breachCasesBubbleVis.js">
+      <file leaf-file-name="identityTheftVis.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/viz/identityTheftVis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1329">
-              <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-              <folding>
-                <marker date="1512146252367" expanded="true" signature="3771:3784" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="identityTheftLineVis.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/js/identityTheftLineVis.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="513">
-              <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
+            <state relative-caret-position="-91">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -84,8 +55,8 @@
       <file leaf-file-name="main_ziqi.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main_ziqi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="49" column="50" lean-forward="false" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="50" />
+            <state relative-caret-position="307">
+              <caret line="49" column="60" lean-forward="false" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="60" />
               <folding />
             </state>
           </provider>
@@ -132,8 +103,8 @@
       <find>vis.yearslider</find>
       <find>vis.data</find>
       <find>tooltip</find>
-      <find>identity-theft</find>
       <find>number of</find>
+      <find>identity-theft</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -151,8 +122,8 @@
         <option value="$PROJECT_DIR$/js/timeToResolveVis.js" />
         <option value="$PROJECT_DIR$/js/breachCasesBubbleVis.js" />
         <option value="$PROJECT_DIR$/js/identityTheftLineVis.js" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/identityTheftVis.js" />
+        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
       </list>
     </option>
@@ -199,6 +170,12 @@
               <item name="d3_visualization_project" type="b2602c69:ProjectViewProjectNode" />
               <item name="d3_visualization_project" type="462c0819:PsiDirectoryNode" />
               <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="d3_visualization_project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="d3_visualization_project" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+              <item name="viz" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -271,12 +248,12 @@
       <workItem from="1511644762335" duration="24000" />
       <workItem from="1511744700188" duration="627000" />
       <workItem from="1511749108405" duration="8261000" />
-      <workItem from="1512144026170" duration="8092000" />
+      <workItem from="1512144026170" duration="8896000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="45015000" />
+    <option name="totallyTimeSpent" value="45819000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -311,14 +288,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/identityTheftVis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3040">
-          <caret line="160" column="126" lean-forward="false" selection-start-line="160" selection-start-column="126" selection-end-line="160" selection-end-column="126" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/main_ziqi.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="703">
@@ -340,9 +309,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2660">
           <caret line="144" column="11" lean-forward="false" selection-start-line="135" selection-start-column="8" selection-end-line="144" selection-end-column="11" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -350,9 +317,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="26" column="19" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <marker date="1512146252367" expanded="true" signature="3771:3784" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -401,9 +366,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2660">
           <caret line="144" column="11" lean-forward="false" selection-start-line="135" selection-start-column="8" selection-end-line="144" selection-end-column="11" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -411,9 +374,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
           <caret line="26" column="19" lean-forward="false" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
-          <folding>
-            <marker date="1512146252367" expanded="true" signature="3771:3784" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -550,9 +511,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="461">
           <caret line="152" column="26" lean-forward="true" selection-start-line="152" selection-start-column="8" selection-end-line="152" selection-end-column="26" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -561,9 +520,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2780">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -580,9 +537,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="226">
           <caret line="53" column="50" lean-forward="false" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="50" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -590,9 +545,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="646">
           <caret line="36" column="17" lean-forward="false" selection-start-line="36" selection-start-column="17" selection-end-line="36" selection-end-column="17" />
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -604,21 +557,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/main_ziqi.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="288">
-          <caret line="49" column="50" lean-forward="false" selection-start-line="49" selection-start-column="44" selection-end-line="49" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/breachCasesBubbleVis.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1329">
           <caret line="77" column="0" lean-forward="true" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
-          <folding>
-            <marker date="1512146252367" expanded="true" signature="3771:3784" ph="..." />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -638,14 +581,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="228" column="20" lean-forward="false" selection-start-line="228" selection-start-column="20" selection-end-line="228" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/js/identityTheftVis.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="494">
@@ -654,10 +589,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="381">
+          <caret line="325" column="36" lean-forward="false" selection-start-line="325" selection-start-column="36" selection-end-line="325" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viz/identityTheftVis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-91">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/main_ziqi.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="307">
+          <caret line="49" column="60" lean-forward="false" selection-start-line="49" selection-start-column="54" selection-end-line="49" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="511" column="18" lean-forward="false" selection-start-line="511" selection-start-column="18" selection-end-line="511" selection-end-column="18" />
+        <state relative-caret-position="324">
+          <caret line="503" column="0" lean-forward="true" selection-start-line="503" selection-start-column="0" selection-end-line="503" selection-end-column="0" />
           <folding />
         </state>
       </provider>
