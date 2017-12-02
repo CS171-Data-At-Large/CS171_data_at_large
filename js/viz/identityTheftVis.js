@@ -11,9 +11,6 @@ IdentityTheftSquareMap = function(_parentElement, _map, _data) {
     this.map = _map;
     this.data = _data;
     this.$graphicContainer = $("#" + _parentElement);
-    this.minYear = 2008;
-    this.maxYear = 2016;
-    this.addSlider("double");
     this.initVis();
 };
 
@@ -24,12 +21,12 @@ IdentityTheftSquareMap = function(_parentElement, _map, _data) {
 
 IdentityTheftSquareMap.prototype.initVis = function() {
     var vis = this;
-    vis.margin = { top: 80, right: 40, bottom: 60, left: 40 };
+    vis.margin = { top: 45, right: 40, bottom: 60, left: 40 };
 
     vis.width = 800 - vis.margin.left - vis.margin.right;
     vis.height = 600 - vis.margin.top - vis.margin.bottom;
 
-    vis.size = 50;
+    vis.size = 60;
 
 
     // SVG drawing area
@@ -48,47 +45,47 @@ IdentityTheftSquareMap.prototype.initVis = function() {
 
     // Add legends
     vis.svg.append("rect")
-        .attr("x", 0).attr("y", 430)
+        .attr("x", 0).attr("y", 500)
         .attr("height", 20).attr("width", 20)
         .style("fill", "#8d9db6");
 
     vis.svg.append("rect")
-        .attr("x", 25).attr("y", 420)
+        .attr("x", 25).attr("y", 490)
         .attr("height", 30).attr("width", 30)
         .style("fill", "#8d9db6");
 
     vis.svg.append("rect")
-        .attr("x", 60).attr("y", 410)
+        .attr("x", 60).attr("y", 480)
         .attr("height", 40).attr("width", 40)
         .style("fill", "#8d9db6");
 
     vis.svg.append("text")
-        .attr("x", 115).attr("y", 440)
+        .attr("x", 115).attr("y", 510)
         .text("Number of victims");
 
     vis.svg.append("rect")
-        .attr("x", 300).attr("y", 420)
+        .attr("x", 300).attr("y", 490)
         .attr("height", 30).attr("width", 30)
         .style("fill", "#bccad6");
 
     vis.svg.append("rect")
-        .attr("x", 335).attr("y", 420)
+        .attr("x", 335).attr("y", 490)
         .attr("height", 30).attr("width", 30)
         .style("fill", "#8d9db6");
 
     vis.svg.append("rect")
-        .attr("x", 370).attr("y", 420)
+        .attr("x", 370).attr("y", 490)
         .attr("height", 30).attr("width", 30)
         .style("fill", "#667292");
 
     vis.svg.append("text")
-        .attr("x", 415).attr("y", 440)
-        .text("Victim density");
+        .attr("x", 415).attr("y", 510)
+        .text("Number of victims per 100,000 population");
 
     // Tooltips
     vis.tooltip1 = vis.svg.append("text")
         .attr("class", "state-tooltip")
-        .attr("x", 270)
+        .attr("x", 350)
         .attr("y", 0)
         .attr("stroke", "#8d9db6")
         .style("font-size", "25px")
@@ -97,7 +94,7 @@ IdentityTheftSquareMap.prototype.initVis = function() {
 
     vis.tooltip2 = vis.svg.append("text")
         .attr("class", "state-tooltip-victims")
-        .attr("x", 270)
+        .attr("x", 350)
         .attr("y", 25)
         .style("font-size", "15px")
         .style("font-weight", 5)
@@ -105,34 +102,11 @@ IdentityTheftSquareMap.prototype.initVis = function() {
 
     vis.tooltip3 = vis.svg.append("text")
         .attr("class", "state-tooltip-density")
-        .attr("x", 270)
+        .attr("x", 350)
         .attr("y", 45)
         .style("font-size", "15px")
         .style("font-weight", 5)
         .style("text-anchor", "middle");
-
-    // add slider control
-    // $('#identity-theft-slider-button').change(function() {
-    //     if (this.checked) {
-    //         vis.yearSlider.noUiSlider.updateOptions({
-    //             start: [vis.minYear, vis.maxYear]
-    //         })
-    //     } else {
-    //         vis.yearSlider.noUiSlider.updateOptions({
-    //             start: vis.minYear
-    //         })
-    //     }
-    // });
-
-    // Listen to slider
-    vis.yearInterval = [2008, 2016];
-
-    vis.yearSlider.noUiSlider.on("change", function(){
-        vis.yearInterval = vis.yearSlider.noUiSlider.get();
-        vis.yearInterval[0] = +vis.yearInterval[0];
-        vis.yearInterval[1] = +vis.yearInterval[1];
-        vis.wrangleData();
-    });
 
     vis.wrangleData();
 
@@ -146,25 +120,21 @@ IdentityTheftSquareMap.prototype.initVis = function() {
 IdentityTheftSquareMap.prototype.wrangleData = function() {
     var vis = this;
 
-    vis.range = vis.yearInterval[1] - vis.yearInterval[0] + 1
-
     vis.displayData = {};
 
-    vis.filteredData = vis.data.filter(function(d) { return d['Year'] >= vis.yearInterval[0] & d['Year'] <= vis.yearInterval[1]; });
-
-    vis.filteredData.forEach(function(d) {
+    vis.data.forEach(function(d) {
         d['Victims per 100000 population'] = +d['Victims per 100000 population'];
         d['Number of victims'] = +d['Number of victims'];
         d['Rank'] = +d['Rank'];
         d['Year'] = +d['Year'];
         if (d['State'] in vis.displayData) {
-            vis.displayData[d['State']]['Victims per 100000 population'] += d['Victims per 100000 population']/vis.range;
-            vis.displayData[d['State']]['Number of victims'] += d['Number of victims']/vis.range;
+            vis.displayData[d['State']]['Victims per 100000 population'] += d['Victims per 100000 population']/9;
+            vis.displayData[d['State']]['Number of victims'] += d['Number of victims']/9;
         }
         else {
             vis.displayData[d['State']] = {'State': d['State'],
-                'Victims per 100000 population': d['Victims per 100000 population']/vis.range,
-                'Number of victims': d['Number of victims']/vis.range};
+                'Victims per 100000 population': d['Victims per 100000 population']/9,
+                'Number of victims': d['Number of victims']/9};
         }
     });
 
@@ -193,12 +163,10 @@ IdentityTheftSquareMap.prototype.updateVis = function() {
 
     // Add US square map
     vis.states = vis.svg.selectAll("rect.square-map")
-        .data(vis.map);
-
-    vis.states.enter()
+        .data(vis.map)
+        .enter()
         .append("rect")
         .attr("class", "square-map")
-        .merge(vis.states)
         .attr("x", function(d) {return (d.column-1) * vis.size - vis.sizeScale(vis.displayData[d.state]['Number of victims'])/2; })
         .attr("y", function(d) {return (d.row-1) * vis.size - vis.sizeScale(vis.displayData[d.state]['Number of victims'])/2; })
         .attr("height", function(d) {
@@ -209,9 +177,7 @@ IdentityTheftSquareMap.prototype.updateVis = function() {
         })
         .attr("fill", function(d) { return vis.colorScale(vis.displayData[d.state]['Victims per 100000 population']);});
 
-    vis.states.exit().remove();
-
-    vis.statesBoundary = vis.svg.selectAll("rect.square-map-boundary")
+    vis.states = vis.svg.selectAll("rect.square-map-boundary")
         .data(vis.map)
         .enter()
         .append("rect")
@@ -253,42 +219,3 @@ IdentityTheftSquareMap.prototype.redraw = function() {
     vis.$graphicContainer.empty();
     vis.initVis();
 }
-
-
-/*
- Add slider control checkbox
- */
-// IdentityTheftSquareMap.prototype.addCheckbox = function() {
-//     var vis = this;
-//     vis.sliderButton = document.getElementById('identity-theft-slider-button');
-//     vis.sliderButton.innerHTML = '<div class="checkbox" id="slider-checkbox">' +
-//         '<label><input type="checkbox" checked="checked">Year Interval</label></div>';
-// };
-
-/*
- Add slider
- */
-
-IdentityTheftSquareMap.prototype.addSlider = function(_mode) {
-    var vis = this;
-
-    vis.yearSlider = document.getElementById('identity-theft-slider');
-
-    noUiSlider.create(vis.yearSlider, {
-        start: [vis.minYear, vis.maxYear],
-        step: 1,
-        connect: true,
-        range: {
-            'min': [vis.minYear],
-            'max': [vis.maxYear]
-        },
-        pips: {
-            mode: 'steps',
-            density: 9
-            // filter: filter50
-        },
-        tooltips: [wNumb({prefix: '<strong>From: </strong>'}), wNumb({prefix: '<strong>To: </strong>'})],
-    });
-
-
-};

@@ -117,8 +117,49 @@ TimeToResolveSquares.prototype.updateVis = function() {
         .attr("class", "rect")
         .on("click", function(d) {
             d3.select(this).transition().style("fill", vis.colorScale(d.Type));
-            vis.showSelected(d);
+
+            d3.select(".instruction-line0")
+                .transition().duration(500)
+                .style("opacity", 0);
+
+            d3.select(".instruction-line1")
+                .transition().duration(500)
+                .style("opacity", 0)
+                .transition().duration(1000)
+                .style("opacity", 1)
+                .style("fill", "black")
+                .text("Like " + d.Proportion + "% of the victims,");
+
+            if (d.Type === "Still not resolved") {
+                d3.select(".instruction-line2")
+                    .transition().duration(500)
+                    .style("opacity", 0)
+                    .transition().duration(3000)
+                    .style("opacity", 1)
+                    .style("fill", vis.colorScale(d.Type))
+                    .text("you still have not resolved your theft.")
+            }
+            else {
+                d3.select(".instruction-line2")
+                    .transition().duration(500)
+                    .style("opacity", 0)
+                    .transition().duration(3000)
+                    .style("opacity", 1)
+                    .style("fill", vis.colorScale(d.Type))
+                    .text("it will take you " + d.Type.toLowerCase() + " to resolve the theft.")
+            }
+
+            d3.select(".instruction-line3")
+                .transition().duration(500)
+                .style("opacity", 0);
+
+            d3.select(".instruction-line4")
+                .transition().duration(500)
+                .style("opacity", 0);
+
             vis.showAll(4000);
+
+            vis.svg.selectAll(".rect").on("click")
 
         })
         .merge(vis.squares)
@@ -165,56 +206,7 @@ TimeToResolveSquares.prototype.updateVis = function() {
             .transition().duration(500)
             .style("opacity", 0)
 
-        d3.selectAll(".rect").on("click", function(d){
-            d3.select(this).transition().style("fill", vis.colorScale(d.Type));
-            vis.showSelected(d);
-            vis.showAll(4000);
-        })
-
     });
-
-    vis.showSelected = function(d) {
-
-        d3.select(".instruction-line0")
-            .transition().duration(500)
-            .style("opacity", 0);
-
-        d3.select(".instruction-line1")
-            .transition().duration(500)
-            .style("opacity", 0)
-            .transition().duration(1000)
-            .style("opacity", 1)
-            .style("fill", "black")
-            .text("Like " + d.Proportion + "% of the victims,");
-
-        if (d.Type === "Still not resolved") {
-            d3.select(".instruction-line2")
-                .transition().duration(500)
-                .style("opacity", 0)
-                .transition().duration(3000)
-                .style("opacity", 1)
-                .style("fill", vis.colorScale(d.Type))
-                .text("you still have not resolved your theft.")
-        }
-        else {
-            d3.select(".instruction-line2")
-                .transition().duration(500)
-                .style("opacity", 0)
-                .transition().duration(3000)
-                .style("opacity", 1)
-                .style("fill", vis.colorScale(d.Type))
-                .text("it will take you " + d.Type.toLowerCase() + " to resolve the theft.")
-        }
-
-        d3.select(".instruction-line3")
-            .transition().duration(500)
-            .style("opacity", 0);
-
-        d3.select(".instruction-line4")
-            .transition().duration(500)
-            .style("opacity", 0);
-
-    };
 
     vis.showAll = function(delay) {
         d3.selectAll(".rect").transition().delay(delay)
@@ -265,7 +257,6 @@ TimeToResolveSquares.prototype.updateVis = function() {
             .style("fill", vis.colorScale(vis.data[4].Time))
             .text("2% of the victims still have not resolved the theft.");
 
-        d3.selectAll(".rect").on("click", function(){})
     };
 
 
