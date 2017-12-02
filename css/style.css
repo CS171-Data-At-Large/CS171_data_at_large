@@ -507,6 +507,14 @@ tr:nth-child(even) {
     font-style: italic;
 }
 
+#identity-theft-slider {
+    width: 85%;
+    margin-top: 40px;
+}
+
+#identity-theft-slider .noUi-connect {
+    background: #667292;
+}
 
 /*********************/
 /*  Recommendations */
