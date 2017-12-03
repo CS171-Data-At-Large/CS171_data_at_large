@@ -107,7 +107,7 @@ var colorDomains = {
     },
     "Method of Leak": {
         "domain": ["hacked", "accidentally published", "inside job", "lost/stolen device or media", "poor security"],
-        "range": ["#5C7C93", '#6F9283', "#8B062B", "#AEABB9", "#AA9982"]
+        "range": ["#5C7C93", "#AEABB9", '#6F9283', "#8B062B", "#AA9982"]
     },
     "Organization": {
         "domain": ["academic", "app", "energy", "financial", "gaming", "government", "healthcare", "legal", "media", "military", "retail", "tech","telecoms", "transport"],
@@ -196,3 +196,4 @@ function updateAxes(){
 
     coordchart.wrangleData();
 }
+

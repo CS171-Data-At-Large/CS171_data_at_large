@@ -13,11 +13,21 @@
     <link rel="stylesheet" href="css/nouislider.css">
     <link rel="stylesheet" href="css/jquery.fullPage.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animate.css">
 
     <script type="text/javascript" src="js/library/jquery.min.js"></script>
     <script type="text/javascript" src="js/library/jquery.fullPage.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
+            // variables
+            var $isAnimatedAbout = $('#section-about .is-animated'),
+                $isAnimatedAboutFlip = $('#section-about .is-animated-flip'),
+                $isAnimatedHacker = $('#section-hacker-text .is-animated'),
+                $isAnimatedBreachIntro = $('#section-data-breaches-intro .is-animated'),
+                $isAnimatedConsequenceIntro = $('#section-consequences-intro .is-animated'),
+                $isAnimatedRecommendationIntro = $('#section-recommendations-intro .is-animated')
+            ;
+
             $('#wrapper').fullpage({
                 css3: true,
                 navigation: true,
@@ -26,7 +36,52 @@
                 //Design
                 controlArrows: true,
                 verticalCentered: true,
-            });
+
+                //animation
+                onLeave: function(index, nextIndex, direction) {
+                    if( index === 1 && nextIndex === 2 ) {
+                        $isAnimatedAbout.addClass('animated fadeInUp');
+                        $isAnimatedAbout.eq(0).css('animation-delay', '0.5s');
+                        $isAnimatedAbout.eq(1).css('animation-delay', '1.5s');
+                        $isAnimatedAbout.eq(2).css('animation-delay', '2.5s');
+
+                        $isAnimatedAboutFlip.addClass('animated flipInY');
+                        $isAnimatedAboutFlip.eq(0).css('animation-delay', '4.5s');
+                        $isAnimatedAboutFlip.eq(1).css('animation-delay', '6.5s');
+                        $isAnimatedAboutFlip.eq(2).css('animation-delay', '8.5s');
+                        $isAnimatedAboutFlip.eq(3).css('animation-delay', '10.5s');
+                    }
+
+                    else if( index === 3 && nextIndex === 4 ) {
+                        $isAnimatedHacker.addClass('animated fadeInUp');
+                        $isAnimatedHacker.eq(0).css('animation-delay', '0.5s');
+                        $isAnimatedHacker.eq(1).css('animation-delay', '2s');
+                        $isAnimatedHacker.eq(2).css('animation-delay', '2s');
+                        $isAnimatedHacker.eq(3).css('animation-delay', '2s');
+                        $isAnimatedHacker.eq(4).css('animation-delay', '2s');
+                    }
+
+                    else if( index === 5 && nextIndex === 6 ) {
+                        $isAnimatedBreachIntro.addClass('animated fadeInUp');
+                        $isAnimatedBreachIntro.eq(0).css('animation-delay', '0.5s');
+                        $isAnimatedBreachIntro.eq(1).css('animation-delay', '2s');
+                        $isAnimatedBreachIntro.eq(2).css('animation-delay', '2s');
+
+                    }
+
+                    else if( index === 8 && nextIndex === 9 ) {
+                        $isAnimatedConsequenceIntro.addClass('animated fadeInUp');
+                        $isAnimatedConsequenceIntro.eq(0).css('animation-delay', '0.5s');
+                        $isAnimatedConsequenceIntro.eq(1).css('animation-delay', '2s');
+                    }
+
+                    else if( index === 11 && nextIndex === 12 ) {
+                        $isAnimatedRecommendationIntro.addClass('animated fadeInUp');
+                        $isAnimatedRecommendationIntro.eq(0).css('animation-delay', '0.5s');
+                        $isAnimatedRecommendationIntro.eq(1).css('animation-delay', '2s');
+                    }
+                }
+                });
 
             $("#myNavbar li a").click(function() {
                 $(this).parent().addClass("active").siblings().removeClass("active");
@@ -89,9 +144,9 @@
     </div>
     <div class="section" data-anchor="about" id="section-about">
         <div class="container">
-            <h2 class="text-center">How many hours did you spend online today?</h2>
+            <h2 class="text-center is-animated">How many hours did you spend online today?</h2>
             <br>
-            <p class="text-center">
+            <p class="text-center is-animated">
                 Most of us can't go a day without the internet. The digital age has brought a whole new way of living,
                 a much more convenient way of living. But at what cost? Just how safe is the personal information
                 you entrust to companies every time you use an app or a website?
@@ -99,12 +154,12 @@
             </p>
             <br>
             <br>
-            <p class="text-center">
+            <p class="text-center is-animated">
                 Before heading on to the visualizations, here is a brief summary of what's to come. <br>
             </p>
             <br>
             <div class="row">
-                <div class="col-sm-12 col-md-3">
+                <div class="col-sm-12 col-md-3 is-animated-flip">
                     <div class="panel outline">
                         <p class="text-center">
                             <img src="img/wifi-connection-signal-symbol.svg" width="75">
@@ -118,7 +173,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-3">
+                <div class="col-sm-12 col-md-3 is-animated-flip">
                     <div class="panel outline">
                         <p class="text-center">
                             <img src="img/virus.svg" width="75">
@@ -130,7 +185,7 @@
                             our personal data can be lost/stolen/leaked.</p>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-3">
+                <div class="col-sm-12 col-md-3 is-animated-flip">
                     <div class="panel outline">
                         <p class="text-center">
                             <img src="img/fingerprint.svg" width="75">
@@ -143,7 +198,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="col-sm-12 col-md-3">
+                <div class="col-sm-12 col-md-3 is-animated-flip">
                     <div class="panel outline">
                         <p class="text-center">
                             <img src="img/information.svg" width="75">
@@ -190,23 +245,23 @@
 
     <div class="section" data-anchor="hacker-intro" id="section-hacker-text">
         <div class="container">
-            <h2>Along with the growth of the internet, hackers gained more opportunities </h2>
+            <h2 class = "is-animated">Along with the growth of the internet, hackers gained more opportunities </h2>
             <br>
             <br>
             <br>
-            <h3>About hackers: A brief history</h3>
-            <p class="text-center">The term "hacker" was coined in the 1960s at MIT, where extremely skilled and intelligent individuals practiced
+            <h3 class = "is-animated">About hackers: A brief history</h3>
+            <p class="text-center is-animated">The term "hacker" was coined in the 1960s at MIT, where extremely skilled and intelligent individuals practiced
                 hardcore programming. Since most people had no idea what hacking was, the term hacker was actually accepted as a positive label slapped onto
                 computer gurus who could push computer systems beyond the defined limits.
                 <br>
             </p>
-            <p>
+            <p class = "is-animated">
                 During the early 1980s, the term “cyberspace” was coined from a novel called “Neuromancer.”
                 A group called the “414s” was one of the earliest hacker groups to ever get raided by the FBI and charged with 60 computer intrusions.
                 <br>
             </p>
 
-            <p class="text-center">
+            <p class="text-center is-animated">
                 As time progressed, Hackers found ways to exploit holes in operating systems of local and remote machines,
                 and this exploitation can be used for good and the bad. While majority of hackers do not commit malicious acts against users,
                 hackers do break into systems for a great variety of reasons. <strong> <em>The ones that intentionally retrieve private data
@@ -238,11 +293,11 @@
 
     <div class="section" data-anchor="data-breaches-intro" id="section-data-breaches-intro">
         <div class="container">
-            <h2>Cybersecurity threat is real: Companies are being hacked.</h2>
-            <p class="text-center">
+            <h2 class = "is-animated">Cybersecurity threat is real: Companies are being hacked.</h2>
+            <p class="text-center is-animated">
                 With your activeness on the internet and the prevalence of hackers, how often do you think a data breach happen?
             </p>
-            <p class="text-center">
+            <p class="text-center is-animated">
                 The Equifax incident in 2017 impacted over 140 millions of people in the US.
                 You might have heard about the billions of account information stolen from Yahoo revealed in 2016 as well.
                 However, cybersecurity issues come up more often than what you might have imagined, and mostly on large scales.
@@ -297,8 +352,8 @@
 
     <div class="section" data-anchor="consequences-intro" id="section-consequences-intro">
         <div class="container">
-            <h2>Identity theft crimes appear to be one of major consequences from the cybersecurity threats</h2>
-            <p class="text-justify">
+            <h2 class = "is-animated">Identity theft crimes appear to be one of major consequences from the cybersecurity threats</h2>
+            <p class="text-justify is-animated">
                 Every year, people report and complain about their identity theft cases throughout the United States.
                 Unfortunately, the overall number of victims has been risen throughout the time as well.
                 There are states where more people get affected, and states where people are more likely being affected.
@@ -357,8 +412,8 @@
 
     <div class="section" data-anchor="recommendations-intro" id="section-recommendations-intro">
         <div class="container">
-            <h2>But there is a silver lining in all of this...</h2>
-            <p class="text-center">
+            <h2 class="is-animated">But there is a silver lining in all of this...</h2>
+            <p class="text-center is-animated">
                 Reports have shown that cybersecurity ranks the very top concern of
                 internet usage in 2017 (<a href="https://www-statista-com.ezp-prod1.hul.harvard.edu/statistics/248488/frequency-with-which-us-internet-users-worry-about-online-privacy/" target="_blank">Source</a>),
                 suggesting that there is increasing awareness of cybersecurity issues.
@@ -491,6 +546,7 @@
 <script src="js/library/topojson.v1.min.js"></script>
 <script src="js/library/nouislider.js"></script>
 <script src="js/library/wNumb.js"></script>
+<script src="js/library/d3-timer.min.js"></script>
 
 <!--&lt;!&ndash;// Add smooth scrolling to all links in navbar and footer&ndash;&gt;-->
 <!--<script>-->

@@ -18,8 +18,6 @@ DataBreachParallelCoord = function(_parentElement, _data, _dimensionData, _typeD
     this.displayDimensions = _dimensionData;
     this.colorData = _colorData;
     this.selectedval = this.displayDimensions[0].key;
-    this.addCheckbox();
-
 
     // DEBUG RAW DATA
     console.log(this.data);
@@ -68,7 +66,7 @@ DataBreachParallelCoord.prototype.initVis = function(){
     vis.ctx.lineWidth = 1.5;
     vis.ctx.scale(vis.devicePixelRatio, vis.devicePixelRatio);
 
-    vis.wrangleData();
+    vis.zoomView();
 };
 
 /*
@@ -77,10 +75,8 @@ DataBreachParallelCoord.prototype.initVis = function(){
 
 DataBreachParallelCoord.prototype.wrangleData = function(){
     var vis = this;
-
+    //console.log("---wrangling data");
     // In the first step no data wrangling/filtering needed
-    //vis.displayData = vis.data;
-
 
     vis.displayData = vis.data;
 
@@ -123,7 +119,7 @@ DataBreachParallelCoord.prototype.updateVis = function(){
         //.attr("class", "axis ")
         .attr("transform", function(d,i) { return "translate(" + vis.xscale(i) + ")"; })
         .each(function(d) {
-            console.log(d.scale.range());
+            //console.log(d.scale.range());
             vis.renderAxis = "axis" in d
                 ? d.axis.scale(d.scale)  // custom axis
                 : vis.yAxis.scale(d.scale);  // default axis
@@ -359,22 +355,75 @@ DataBreachParallelCoord.prototype.updateAxes = function(){
  Add drop down menu to the DOM
  */
 DataBreachParallelCoord.prototype.addCheckbox = function() {
-    var p = document.getElementById("checkbox-control");
-    var menu = document.createElement("form");
-    var selections = '<div class="form-group">' +
-        '<br>' +
-        '<pre><p><strong>Click on axis title to color by the chosen axis, brush to select, and/or use checkboxes to select axes to include in the plot:</strong></p>' +
+    var p = document.getElementById("text-container");
+    //var menu = document.createElement("form");
+    var selections = '<form><div class="form-group">' +
+        '<p><strong>Click on axis title to color by the chosen axis, brush to select, and/or use checkboxes to select axes to include in the plot:</strong></p>' +
         '<input type="checkbox" class="AxesCheckbox" value="Method of Leak" checked="checked" onchange="updateAxes()"> Method of Leak &#9' +
         '<input type="checkbox" class="AxesCheckbox" value="Data Sensitivity" checked="checked" onchange="updateAxes()"> Data Sensitivity &#9' +
         '<input type="checkbox" class="AxesCheckbox" value="Organization Type" checked="checked" onchange="updateAxes()">Organization Type &#9' +
         '<input type="checkbox" class="AxesCheckbox" value="Year of Occurrence" checked="checked" onchange="updateAxes()">Year of Occurrence &#9' +
-        '<input type="checkbox" class="AxesCheckbox" value="Number of Records Lost" checked="checked" onchange="updateAxes()"> Records Lost &#9 </pre>' +
+        '<input type="checkbox" class="AxesCheckbox" value="Number of Records Lost" checked="checked" onchange="updateAxes()"> Records Lost &#9 ' +
         '</div>';
 
-    menu.innerHTML = selections;
-    p.appendChild(menu);
+    p.innerHTML = selections;
+    //p.appendChild(menu);
 }
 
-DataBreachParallelCoord.prototype.fullView = function() {
-
+DataBreachParallelCoord.prototype.initText = function() {
+    var p = document.getElementById("checkbox-control");
+    var texts = '<pre id = "text-container"><p>' +
+        "Let's take a quick look at the following graph which is filtered only to include the SSN/personal Details lost. When color by the method of leak, you may realize that lost or stolen device, together with hacked events, cause the greatest number of loss of such sensitive and extremely private information. </br>" +
+        "This rings a bell for us - sometimes by being more careful with the hardwares can help protect much personal information. " +
+        '</p></pre>';
+    p.innerHTML = texts;
+    //p.appendChild(menu);
 }
+
+DataBreachParallelCoord.prototype.zoomView = function() {
+    var vis = this;
+
+    // In the first step no data wrangling/filtering needed
+    //vis.displayData = vis.data;
+
+
+    vis.displayData = vis.data;
+
+
+    vis.displayData = vis.data.filter(function(d) {
+        return d["Data Sensitivity"] == "SSN/Personal details";
+    });
+    console.log(vis.displayData);
+
+    vis.displayDimensions = [];
+
+    choices = ["Method of Leak", "Data Sensitivity", "Number of Records Lost"];
+
+    vis.dimensions.forEach(function(d){
+        //console.log(d.description, $.inArray(d.description, choices));
+        if ($.inArray(d.description, choices) > -1){
+            vis.displayDimensions.push(d);
+        }
+    });
+    //console.log(choices);
+
+    console.log(vis.displayDimensions);
+    vis.selectedval = "Method of Leak";
+    // Update the visualization
+    vis.updateVis();
+    vis.initText();
+
+ //   window.setTimeout(vis.addCheckbox(), 10000);
+    window.setTimeout(function(d){
+        vis.addCheckbox();
+        choices = [];
+        d3.selectAll(".AxesCheckbox").each(function(d){
+            cb = d3.select(this);
+            if(cb.property("checked")){
+                choices.push(cb.property("value"));
+            }
+        });
+        vis.wrangleData();
+    }, 10000);
+
+};
