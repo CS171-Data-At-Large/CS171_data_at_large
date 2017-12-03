@@ -35,7 +35,6 @@ DataBreachParallelCoord.prototype.initVis = function(){
 
     vis.width = document.getElementById(vis.parentElement).offsetWidth - vis.margin.left - vis.margin.right;
     vis.height = 400 - vis.margin.top - vis.margin.bottom;
-    vis.innerHeight = vis.height - 2;
 
     vis.devicePixelRatio = window.devicePixelRatio || 1;
 
@@ -80,18 +79,22 @@ DataBreachParallelCoord.prototype.wrangleData = function(){
     var vis = this;
 
     // In the first step no data wrangling/filtering needed
+    //vis.displayData = vis.data;
+
+
     vis.displayData = vis.data;
+
     vis.displayDimensions = [];
 
     vis.dimensions.forEach(function(d){
-        console.log(d.description, $.inArray(d.description, choices));
+        //console.log(d.description, $.inArray(d.description, choices));
         if ($.inArray(d.description, choices) > -1){
             vis.displayDimensions.push(d);
         }
     });
-    console.log(choices);
+    //console.log(choices);
 
-    console.log(vis.displayDimensions);
+    //console.log(vis.displayDimensions);
     vis.selectedval = vis.displayDimensions[0].key;
     // Update the visualization
     vis.updateVis();
@@ -167,7 +170,6 @@ DataBreachParallelCoord.prototype.updateVis = function(){
         //.attr("class", "axis ")
         .attr("transform", function(d,i) { return "translate(" + vis.xscale(i) + ")"; })
         .each(function(d) {
-            console.log(d.scale.range());
             vis.renderAxis = "axis" in d
                 ? d.axis.scale(d.scale)  // custom axis
                 : vis.yAxis.scale(d.scale);  // default axis
@@ -194,7 +196,7 @@ DataBreachParallelCoord.prototype.updateVis = function(){
         .text(function(d) { return "description" in d ? d.description : d.key; })
         .on("click", function(d){
             if(d.key !== "Records Lost") {
-                console.log(d.key);
+                //console.log(d.key);
                 vis.selectedval = d.key;
                 color.domain(vis.colorData[d.key].domain)
                     .range(vis.colorData[d.key].range);
@@ -293,7 +295,7 @@ DataBreachParallelCoord.prototype.updateVis = function(){
                 });
             });
 
-        var selected = vis.data.filter(function(d) {
+        vis.displayData = vis.data.filter(function(d) {
             if (actives.every(function(active) {
                     var dim = active.dimension;
                     // test if point is within extents for each active brush
@@ -332,22 +334,26 @@ DataBreachParallelCoord.prototype.updateVis = function(){
          */
 
         vis.ctx.clearRect(0,0,vis.width,vis.height);
-        vis.ctx.globalAlpha = d3.min([0.85/Math.pow(selected.length,0.3),1]);
-        vis.render(selected);
+        vis.ctx.globalAlpha = d3.min([0.85/Math.pow(vis.displayData.length,0.3),1]);
+        vis.render(vis.displayData);
 
     }
 
 };
 
+/*
 DataBreachParallelCoord.prototype.updateAxes = function(){
     var vis = this;
     console.log("--updateAxes");
-
+    vis.svg.selectAll(".axis .brush")
+        .each(function(d) {
+            d3.select(this).call(d.brush.move, null)});
+    vis.displayData = vis.data;
     vis.ctx.clearRect(0,0,vis.width,vis.height);
 
     vis.wrangleData();
 }
-
+*/
 
 /*
  Add drop down menu to the DOM
@@ -367,4 +373,8 @@ DataBreachParallelCoord.prototype.addCheckbox = function() {
 
     menu.innerHTML = selections;
     p.appendChild(menu);
+}
+
+DataBreachParallelCoord.prototype.fullView = function() {
+
 }
