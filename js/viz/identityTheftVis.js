@@ -24,12 +24,12 @@ IdentityTheftSquareMap = function(_parentElement, _map, _data) {
 
 IdentityTheftSquareMap.prototype.initVis = function() {
     var vis = this;
-    vis.margin = { top: 80, right: 40, bottom: 60, left: 40 };
+    vis.margin = { top: 100, right: 40, bottom: 60, left: 80 };
 
-    vis.width = 800 - vis.margin.left - vis.margin.right;
+    vis.width = document.getElementById(vis.parentElement).offsetWidth - vis.margin.left - vis.margin.right;
     vis.height = 600 - vis.margin.top - vis.margin.bottom;
 
-    vis.size = 50;
+    vis.size = 60;
 
 
     // SVG drawing area
@@ -47,48 +47,50 @@ IdentityTheftSquareMap.prototype.initVis = function() {
         .range(["#f0f1f5", "#667292"]);
 
     // Add legends
+    vis.xBase = 750;
+    vis.yBase = -270;
     vis.svg.append("rect")
-        .attr("x", 0).attr("y", 430)
+        .attr("x", vis.xBase+0).attr("y", vis.yBase+430)
         .attr("height", 20).attr("width", 20)
         .style("fill", "#8d9db6");
 
     vis.svg.append("rect")
-        .attr("x", 25).attr("y", 420)
+        .attr("x", vis.xBase+25).attr("y", vis.yBase+420)
         .attr("height", 30).attr("width", 30)
         .style("fill", "#8d9db6");
 
     vis.svg.append("rect")
-        .attr("x", 60).attr("y", 410)
+        .attr("x", vis.xBase+60).attr("y", vis.yBase+410)
         .attr("height", 40).attr("width", 40)
         .style("fill", "#8d9db6");
 
     vis.svg.append("text")
-        .attr("x", 115).attr("y", 440)
+        .attr("x", vis.xBase+115).attr("y", vis.yBase+440)
         .text("Number of victims");
 
     vis.svg.append("rect")
-        .attr("x", 300).attr("y", 420)
+        .attr("x", vis.xBase+0).attr("y", vis.yBase+470)
         .attr("height", 30).attr("width", 30)
         .style("fill", "#bccad6");
 
     vis.svg.append("rect")
-        .attr("x", 335).attr("y", 420)
+        .attr("x", vis.xBase+35).attr("y", vis.yBase+470)
         .attr("height", 30).attr("width", 30)
         .style("fill", "#8d9db6");
 
     vis.svg.append("rect")
-        .attr("x", 370).attr("y", 420)
+        .attr("x", vis.xBase+70).attr("y", vis.yBase+470)
         .attr("height", 30).attr("width", 30)
         .style("fill", "#667292");
 
     vis.svg.append("text")
-        .attr("x", 415).attr("y", 440)
+        .attr("x", vis.xBase+115).attr("y", vis.yBase+490)
         .text("Victim density");
 
     // Tooltips
     vis.tooltip1 = vis.svg.append("text")
         .attr("class", "state-tooltip")
-        .attr("x", 270)
+        .attr("x", 320)
         .attr("y", 0)
         .attr("stroke", "#8d9db6")
         .style("font-size", "25px")
@@ -97,7 +99,7 @@ IdentityTheftSquareMap.prototype.initVis = function() {
 
     vis.tooltip2 = vis.svg.append("text")
         .attr("class", "state-tooltip-victims")
-        .attr("x", 270)
+        .attr("x", 320)
         .attr("y", 25)
         .style("font-size", "15px")
         .style("font-weight", 5)
@@ -105,7 +107,7 @@ IdentityTheftSquareMap.prototype.initVis = function() {
 
     vis.tooltip3 = vis.svg.append("text")
         .attr("class", "state-tooltip-density")
-        .attr("x", 270)
+        .attr("x", 320)
         .attr("y", 45)
         .style("font-size", "15px")
         .style("font-weight", 5)
@@ -123,6 +125,17 @@ IdentityTheftSquareMap.prototype.initVis = function() {
     //         })
     //     }
     // });
+
+    vis.tipLine = d3.tip()
+        .attr("class", "d3-tip")
+        .offset([160, 250]);
+
+    vis.tipHTML = d3.tip()
+        .attr("class", "d3-tip")
+        .attr("id", "tooltip-holder")
+        .offset([-10, 0]);
+
+    vis.svg.call(vis.tipHTML);
 
     // Listen to slider
     vis.yearInterval = [2008, 2016];
@@ -191,6 +204,9 @@ IdentityTheftSquareMap.prototype.updateVis = function() {
     vis.colorScale.domain([d3.min(vis.displayDataArray, function(d) {return d['Victims per 100000 population']}),
         d3.max(vis.displayDataArray, function(d) {return d['Victims per 100000 population']})]);
 
+    vis.tipLine.html(function(d) {return $("#tooltip-holder").html();});
+    vis.svg.call(vis.tipLine);
+
     // Add US square map
     vis.states = vis.svg.selectAll("rect.square-map")
         .data(vis.map);
@@ -233,14 +249,15 @@ IdentityTheftSquareMap.prototype.updateVis = function() {
                 .text(d3.format(".2f")(vis.displayData[d.state]['Victims per 100000 population']) + " victims in every 100,000 people");
 
             d3.select(this).style("fill-opacity", 0.2);
+
+            vis.selected = d.state;
+            linechart.wrangleData(vis.selected);
+            vis.tipLine.show(d);
         })
         .on("mouseout", function(d) {
             d3.select(this).style("fill-opacity", 0);
+            vis.tipLine.hide(d);
         })
-        .on("click", function(d) {
-            vis.selected = d.state;
-            linechart.wrangleData(vis.selected);
-        });
 
 };
 

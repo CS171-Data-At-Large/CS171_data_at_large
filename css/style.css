@@ -523,6 +523,20 @@ tr:nth-child(even) {
     background: #8d9db6;
 }
 
+
+.white-axis line{
+    stroke: white;
+}
+
+.white-axis path{
+    stroke: white;
+}
+
+.white-axis text{
+    fill: white;
+}
+
+
 /*********************/
 /*  Recommendations */
 /*********************/
