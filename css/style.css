@@ -45,6 +45,7 @@ label {
 }
 
 
+
 /*********************/
 /*  Navbar Display */
 /*********************/
@@ -201,6 +202,34 @@ body, html {
         -moz-transform: scale(1);
         transform: scale(1);
     }
+}
+
+/* Animation */
+.line-1{
+    position: relative;
+    top: 50%;
+    width: 35em;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    font-size: 180%;
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);
+}
+
+/* Animation */
+.anim-typewriter{
+    animation: typewriter 10s steps(80) 1s 1 normal both,
+    blinkTextCursor 500ms steps(80) infinite normal;
+}
+@keyframes typewriter{
+    from{width: 0;}
+    to{width: 35em;}
+}
+@keyframes blinkTextCursor{
+    from{border-right-color: rgba(255,255,255,.75);}
+    to{border-right-color: transparent;}
 }
 
 /*********************/
