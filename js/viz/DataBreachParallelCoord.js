@@ -20,8 +20,8 @@ DataBreachParallelCoord = function(_parentElement, _data, _dimensionData, _typeD
     this.selectedval = this.displayDimensions[0].key;
 
     // DEBUG RAW DATA
-    console.log(this.data);
-    console.log(this.dimensions);
+    // console.log(this.data);
+    // console.log(this.dimensions);
 
     this.initVis();
 }

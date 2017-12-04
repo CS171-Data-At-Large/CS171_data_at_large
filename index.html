@@ -90,7 +90,7 @@
 
             $("#fp-nav ul li a").bind('activeChange', function(){
                 var navbarNames = ["#home", "#about", "#internet", "#data-breaches-intro",
-                    "#consequences-intro", "#recommendations-intro"];
+                    "#consequences-intro", "#recommendations-intro", "#about-us"];
 
                 var activePage = $(this).attr("href");
 
@@ -214,7 +214,7 @@
         </div>
     </div>
 
-    <div class="section" data-anchor="internet" id="section-internet">
+    <div class="section extra-margin" data-anchor="internet" id="section-internet">
         <div class="container">
             <h2>Internet has gone viral since 1995</h2>
             <p>This isn’t news, but you might not realize how drastic the increase in internet activities has been,
@@ -244,7 +244,7 @@
     </div>
 
     <div class="section" data-anchor="hacker-intro" id="section-hacker-text">
-        <div class="container">
+        <div class="section-intro-text">
             <h2 class = "is-animated">Along with the growth of the internet, hackers gained more opportunities </h2>
             <br>
             <br>
@@ -270,8 +270,10 @@
         </div>
     </div>
 
-    <div class="section" data-anchor="hacker-viz" id="section-hacker-viz">
+    <div class="section extra-margin extra-extra-margin" data-anchor="hacker-viz" id="section-hacker-viz">
         <div class="container">
+            <p class="text-center"> <strong><em>Hover over the reasons to see details. And hover
+            over the pie charts to actual survey questions and responses!</em></strong></p>
             <div class="row" id="vis-2">
                 <div class="col-md-6">
                     <div id="vis-hacker-reasons"></div>
@@ -280,11 +282,11 @@
                 <div class="col-md-6 padding-0">
                     <div id="vis-hacker-info"><h3>Did you know that a hackers survey revealed...</h3>
                     </div>
-                    <p class="text-right">
-                        <a href="https://www.helpnetsecurity.com/2002/04/08/the-history-of-hacking/" target="_blank">Information source 1</a>;
-                        <a href="https://www.getcujo.com/blog/7-reasons-hackers-hack/" target="_blank">Information source 2</a>;
-                        <a href="https://thycotic.com/resources/black-hat-2017-survey/" target="_blank">Information source 3</a>.
-                    </p>
+                    <!--<p class="text-right">-->
+                        <!--<a href="https://www.helpnetsecurity.com/2002/04/08/the-history-of-hacking/" target="_blank">Information source 1</a>;-->
+                        <!--<a href="https://www.getcujo.com/blog/7-reasons-hackers-hack/" target="_blank">Information source 2</a>;-->
+                        <!--<a href="https://thycotic.com/resources/black-hat-2017-survey/" target="_blank">Information source 3</a>.-->
+                    <!--</p>-->
 
                 </div>
             </div>
@@ -292,8 +294,11 @@
     </div>
 
     <div class="section" data-anchor="data-breaches-intro" id="section-data-breaches-intro">
-        <div class="container">
+        <div class="section-intro-text">
             <h2 class = "is-animated">Cybersecurity threat is real: Companies are being hacked.</h2>
+            <br>
+            <br>
+            <br>
             <p class="text-center is-animated">
                 With your activeness on the internet and the prevalence of hackers, how often do you think a data breach happen?
             </p>
@@ -307,7 +312,7 @@
         </div>
     </div>
 
-    <div class="section" data-anchor="data-breaches-viz1" id="section-data-breaches-viz1">
+    <div class="section extra-margin" data-anchor="data-breaches-viz1" id="section-data-breaches-viz1">
         <div class="container">
             <p>
                 Visualizations below offer an overall view of the data breach cases 2004-2017 by method of leak,
@@ -334,7 +339,7 @@
         </div>
     </div>
 
-    <div class="section" data-anchor="data-breaches-viz2" id="section-data-breaches-viz2">
+    <div class="section extra-margin" data-anchor="data-breaches-viz2" id="section-data-breaches-viz2">
         <div class="container">
             <p class="text-center">
                 Is there a particular type of method of leak that yields the most data breach incidents?
@@ -351,9 +356,12 @@
     </div>
 
     <div class="section" data-anchor="consequences-intro" id="section-consequences-intro">
-        <div class="container">
-            <h2 class = "is-animated">Identity theft crimes appear to be one of major consequences from the cybersecurity threats</h2>
-            <p class="text-justify is-animated">
+        <div class="section-intro-text">
+            <h2 class = "is-animated">A major consequence of cybersecurity threats is Identity Theft Crimes</h2>
+            <br>
+            <br>
+            <br>
+            <p class="text-center is-animated">
                 Every year, people report and complain about their identity theft cases throughout the United States.
                 Unfortunately, the overall number of victims has been risen throughout the time as well.
                 There are states where more people get affected, and states where people are more likely being affected.
@@ -377,18 +385,11 @@
                         <div id="vis-identity-theft"></div>
                     </div>
                 </div>
-                <!-- line chart and table -->
-                <!--<div class="col-md-5">-->
-                    <!--<div id="vis-8">-->
-                        <!--<div id="vis-identity-theft-line"></div>-->
-                        <!--<table class="table table-hover table-condensed table-striped" id="table-identity-theft"></table>-->
-                    <!--</div>-->
-                <!--</div>-->
             </div>
         </div>
     </div>
 
-    <div class="section" data-anchor="consequences-viz2" id="section-consequences-viz2">
+    <div class="section extra-margin" data-anchor="consequences-viz2" id="section-consequences-viz2">
         <div class="container">
             <h2>Identity theft is beyond a momentary loss</h2>
             <p>If you were to be involved in an identity theft case, how long do you expect to get the case resolved?
@@ -411,18 +412,22 @@
     </div>
 
     <div class="section" data-anchor="recommendations-intro" id="section-recommendations-intro">
-        <div class="container">
+        <div class="section-intro-text">
             <h2 class="is-animated">But there is a silver lining in all of this...</h2>
+            <br>
+            <br>
+            <br>
             <p class="text-center is-animated">
                 Reports have shown that cybersecurity ranks the very top concern of
                 internet usage in 2017 (<a href="https://www-statista-com.ezp-prod1.hul.harvard.edu/statistics/248488/frequency-with-which-us-internet-users-worry-about-online-privacy/" target="_blank">Source</a>),
-                suggesting that there is increasing awareness of cybersecurity issues.
+                suggesting that there is increasing awareness of cybersecurity issues. <br>
+                <br>
                 Perhaps due to this increasing awareness, spending on building a safer cyber space has also been increasing in recent years (<a href="https://www-statista-com.ezp-prod1.hul.harvard.edu/statistics/615450/cybersecurity-spending-in-the-us/" target="_blank">Source</a>).
             </p>
         </div>
     </div>
 
-    <div class="section" data-anchor="recommendations" id="section-recommendations">
+    <div class="section extra-margin" data-anchor="recommendations" id="section-recommendations">
         <div class="container">
             <h2 class="text-center">So what should you do when you've been hacked?</h2>
             <p class="text-center">Hover over the info-boxes to show specific recommendations
