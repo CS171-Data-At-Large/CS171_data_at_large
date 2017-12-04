@@ -22,6 +22,24 @@ label {
     padding-top:0;
 }
 
+.section-intro-text {
+    background-color: #F8F8F8;
+    padding: 2em 10em;
+}
+
+.container{
+    padding: 2em 0;
+}
+
+.extra-margin,
+.extra-extra-margin{
+    margin-top: 2em;
+}
+
+/*.section{*/
+    /*margin-top: 1em;*/
+/*}*/
+
 /*********************/
 /*  Navbar Display */
 /*********************/
@@ -216,17 +234,14 @@ body, html {
 /*  Internet Section */
 /*********************/
 
-.bg-2{
-    background-color: #F8F8F8;
-}
 
-.bg-2 .axis path,
+#section-internet .axis path,
 .axis line {
     fill: none;
     stroke: #000;
     shape-rendering: crispEdges;
 }
-.bg-2 .axis text {
+#section-internet .axis text {
     font-size: 11px;
 }
 /*the line graph*/
@@ -240,7 +255,7 @@ body, html {
     fill: #667292;
 }
 
-.bg-2 .axis-title {
+.axis-title {
     fill: black;
     font-size: 20px;
     font-weight: bold;
