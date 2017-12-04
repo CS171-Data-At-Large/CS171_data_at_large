@@ -516,7 +516,9 @@ tr:nth-child(even) {
 }
 
 #identity-theft-slider {
-    width: 85%;
+    width: 60%;
+    margin-left: 230px;
+    text-align: center;
 }
 
 #identity-theft-slider .noUi-connect {
