@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="663ed40f-7050-4c53-b973-41400f10bb6e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/style.css" afterPath="$PROJECT_DIR$/css/style.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/main_ziqi.js" afterPath="$PROJECT_DIR$/js/main_ziqi.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viz/breachCasesBubbleVis.js" afterPath="$PROJECT_DIR$/js/viz/breachCasesBubbleVis.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viz/identityTheftLineVis.js" afterPath="$PROJECT_DIR$/js/viz/identityTheftLineVis.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viz/identityTheftVis.js" afterPath="$PROJECT_DIR$/js/viz/identityTheftVis.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,10 +16,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
+            <state relative-caret-position="19">
               <caret line="372" column="34" lean-forward="false" selection-start-line="372" selection-start-column="34" selection-end-line="372" selection-end-column="34" />
               <folding />
             </state>
@@ -35,7 +29,7 @@
       <file leaf-file-name="style.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/style.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="378">
+            <state relative-caret-position="9937">
               <caret line="523" column="1" lean-forward="false" selection-start-line="523" selection-start-column="0" selection-end-line="523" selection-end-column="1" />
               <folding />
             </state>
@@ -45,10 +39,10 @@
       <file leaf-file-name="breachCasesBubbleVis.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/viz/breachCasesBubbleVis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="218">
-              <caret line="80" column="23" lean-forward="true" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
+            <state relative-caret-position="509">
+              <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
               <folding>
-                <marker date="1512336720317" expanded="true" signature="3771:3784" ph="..." />
+                <marker date="1512368586265" expanded="true" signature="3771:3784" ph="..." />
               </folding>
             </state>
           </provider>
@@ -57,8 +51,8 @@
       <file leaf-file-name="DataBreachParallelCoord.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/viz/DataBreachParallelCoord.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="33" column="70" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="70" />
+            <state relative-caret-position="589">
+              <caret line="33" column="70" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="70" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
               </folding>
@@ -66,11 +60,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="identityTheftVis.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="identityTheftVis.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/viz/identityTheftVis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="130" column="20" lean-forward="false" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
+            <state relative-caret-position="213">
+              <caret line="126" column="10" lean-forward="false" selection-start-line="126" selection-start-column="10" selection-end-line="126" selection-end-column="10" />
               <folding />
             </state>
           </provider>
@@ -79,8 +73,8 @@
       <file leaf-file-name="identityTheftLineVis.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/viz/identityTheftLineVis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1248">
-              <caret line="66" column="33" lean-forward="true" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
+            <state relative-caret-position="1254">
+              <caret line="66" column="33" lean-forward="false" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -89,7 +83,7 @@
       <file leaf-file-name="main_ziqi.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/main_ziqi.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="591">
+            <state relative-caret-position="1235">
               <caret line="65" column="4" lean-forward="false" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="63" />
               <folding />
             </state>
@@ -160,8 +154,8 @@
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/css/style.css" />
         <option value="$PROJECT_DIR$/js/viz/identityTheftLineVis.js" />
-        <option value="$PROJECT_DIR$/js/viz/breachCasesBubbleVis.js" />
         <option value="$PROJECT_DIR$/js/viz/identityTheftVis.js" />
+        <option value="$PROJECT_DIR$/js/viz/breachCasesBubbleVis.js" />
       </list>
     </option>
   </component>
@@ -171,7 +165,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="width" value="1440" />
     <option name="height" value="900" />
   </component>
@@ -191,6 +185,7 @@
     </navigator>
     <panes>
       <pane id="Scratches" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -218,7 +213,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -287,14 +281,15 @@
       <workItem from="1511749108405" duration="8261000" />
       <workItem from="1512144026170" duration="8896000" />
       <workItem from="1512285326691" duration="6286000" />
+      <workItem from="1512368548227" duration="57000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="52105000" />
+    <option name="totallyTimeSpent" value="52162000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20972222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -451,24 +446,16 @@
     <entry file="file://$PROJECT_DIR$/js/identityTheftVis.js" />
     <entry file="file://$PROJECT_DIR$/js/main_ziqi.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
+        <state relative-caret-position="1235">
           <caret line="65" column="4" lean-forward="false" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="63" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="372" column="34" lean-forward="false" selection-start-line="372" selection-start-column="34" selection-end-line="372" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/viz/DataBreachParallelCoord.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="33" column="70" lean-forward="true" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="70" />
+        <state relative-caret-position="589">
+          <caret line="33" column="70" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="70" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
           </folding>
@@ -477,7 +464,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/style.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
+        <state relative-caret-position="9937">
           <caret line="523" column="1" lean-forward="false" selection-start-line="523" selection-start-column="0" selection-end-line="523" selection-end-column="1" />
           <folding />
         </state>
@@ -485,26 +472,34 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/viz/identityTheftLineVis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1248">
-          <caret line="66" column="33" lean-forward="true" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
+        <state relative-caret-position="1254">
+          <caret line="66" column="33" lean-forward="false" selection-start-line="66" selection-start-column="33" selection-end-line="66" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/viz/identityTheftVis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="213">
+          <caret line="126" column="10" lean-forward="false" selection-start-line="126" selection-start-column="10" selection-end-line="126" selection-end-column="10" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/viz/breachCasesBubbleVis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="218">
-          <caret line="80" column="23" lean-forward="true" selection-start-line="80" selection-start-column="23" selection-end-line="80" selection-end-column="23" />
+        <state relative-caret-position="509">
+          <caret line="27" column="20" lean-forward="false" selection-start-line="27" selection-start-column="20" selection-end-line="27" selection-end-column="20" />
           <folding>
-            <marker date="1512336720317" expanded="true" signature="3771:3784" ph="..." />
+            <marker date="1512368586265" expanded="true" signature="3771:3784" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/viz/identityTheftVis.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="130" column="20" lean-forward="false" selection-start-line="130" selection-start-column="20" selection-end-line="130" selection-end-column="20" />
+        <state relative-caret-position="19">
+          <caret line="372" column="34" lean-forward="false" selection-start-line="372" selection-start-column="34" selection-end-line="372" selection-end-column="34" />
           <folding />
         </state>
       </provider>
