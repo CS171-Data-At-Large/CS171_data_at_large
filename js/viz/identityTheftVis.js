@@ -215,6 +215,29 @@ IdentityTheftSquareMap.prototype.updateVis = function() {
     vis.tipLine.html(function(d) {return $("#tooltip-holder").html();});
     vis.svg.call(vis.tipLine);
 
+    // Default tooltip
+    vis.defaultTooltip = function() {
+        var victimSum = 0;
+        var victimDensity = 0;
+        vis.displayDataArray.forEach(function(d) {
+            victimSum += d['Number of victims']
+            victimDensity += d['Victims per 100000 population']
+        });
+        victimDensity = victimDensity / vis.displayDataArray.length;
+
+        vis.tooltip1.attr("class", "state-tooltip")
+            .text("The United States");
+        vis.tooltip2.attr("class", "state-tooltip-years")
+            .text("Between " + vis.yearInterval[0] + " and " + vis.yearInterval[1]);
+        vis.tooltip3.attr("class", "state-tooltip-victims")
+            .text(d3.format(".2f")(victimSum) + " victims on average per year");
+        vis.tooltip4.attr("class", "state-tooltip-density")
+            .text(d3.format(".2f")(victimDensity) + " victims in every 100,000 people");
+    };
+
+    vis.defaultTooltip();
+
+
     // Add US square map
     vis.states = vis.svg.selectAll("rect.square-map")
         .data(vis.map);
