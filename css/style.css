@@ -36,9 +36,14 @@ label {
     margin-top: 2em;
 }
 
-/*.section{*/
-    /*margin-top: 1em;*/
-/*}*/
+.section-intro-text h2{
+    color: #5cadd6 !important;
+}
+
+#section-recommendations h2{
+    color: #5cadd6 !important;
+}
+
 
 /*********************/
 /*  Navbar Display */

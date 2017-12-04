@@ -210,7 +210,7 @@ HackerInfoVis.prototype.addAnnotation = function() {
                     end: "dot"
                 },
                 x: 100,
-                y: 330,
+                y: 345,
                 dy: 30,
                 dx: 20
             },
@@ -224,7 +224,7 @@ HackerInfoVis.prototype.addAnnotation = function() {
                     end: "dot"
                 },
                 x: 310,
-                y: 330,
+                y: 345,
                 dy: 30,
                 dx: 20
             },
@@ -238,7 +238,7 @@ HackerInfoVis.prototype.addAnnotation = function() {
                     end: "dot"
                 },
                 x: 460,
-                y: 145,
+                y: 150,
                 dy: -30,
                 dx: -20
             }].map(function(d){ d.color = "grey"; return d});
