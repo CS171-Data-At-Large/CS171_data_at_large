@@ -24,7 +24,7 @@ IdentityTheftSquareMap = function(_parentElement, _map, _data) {
 
 IdentityTheftSquareMap.prototype.initVis = function() {
     var vis = this;
-    vis.margin = { top: 100, right: 40, bottom: 60, left: 80 };
+    vis.margin = { top: 70, right: 40, bottom: 60, left: 240 };
 
     vis.width = document.getElementById(vis.parentElement).offsetWidth - vis.margin.left - vis.margin.right;
     vis.height = 600 - vis.margin.top - vis.margin.bottom;
@@ -47,8 +47,8 @@ IdentityTheftSquareMap.prototype.initVis = function() {
         .range(["#f0f1f5", "#667292"]);
 
     // Add legends
-    vis.xBase = 750;
-    vis.yBase = -270;
+    vis.xBase = 50;
+    vis.yBase = 70;
     vis.svg.append("rect")
         .attr("x", vis.xBase+0).attr("y", vis.yBase+430)
         .attr("height", 20).attr("width", 20)
@@ -69,36 +69,36 @@ IdentityTheftSquareMap.prototype.initVis = function() {
         .text("Number of victims");
 
     vis.svg.append("rect")
-        .attr("x", vis.xBase+0).attr("y", vis.yBase+470)
+        .attr("x", vis.xBase+300).attr("y", vis.yBase+420)
         .attr("height", 30).attr("width", 30)
         .style("fill", "#bccad6");
 
     vis.svg.append("rect")
-        .attr("x", vis.xBase+35).attr("y", vis.yBase+470)
+        .attr("x", vis.xBase+335).attr("y", vis.yBase+420)
         .attr("height", 30).attr("width", 30)
         .style("fill", "#8d9db6");
 
     vis.svg.append("rect")
-        .attr("x", vis.xBase+70).attr("y", vis.yBase+470)
+        .attr("x", vis.xBase+370).attr("y", vis.yBase+420)
         .attr("height", 30).attr("width", 30)
         .style("fill", "#667292");
 
     vis.svg.append("text")
-        .attr("x", vis.xBase+115).attr("y", vis.yBase+490)
+        .attr("x", vis.xBase+420).attr("y", vis.yBase+440)
         .text("Victim density");
 
     // Tooltips
     vis.tooltip1 = vis.svg.append("text")
         .attr("class", "state-tooltip")
         .attr("x", 320)
-        .attr("y", 0)
+        .attr("y", -5)
         .attr("stroke", "#8d9db6")
         .style("font-size", "25px")
         .style("font-weight", 10)
         .style("text-anchor", "middle");
 
     vis.tooltip2 = vis.svg.append("text")
-        .attr("class", "state-tooltip-victims")
+        .attr("class", "state-tooltip-years")
         .attr("x", 320)
         .attr("y", 25)
         .style("font-size", "15px")
@@ -106,12 +106,21 @@ IdentityTheftSquareMap.prototype.initVis = function() {
         .style("text-anchor", "middle");
 
     vis.tooltip3 = vis.svg.append("text")
-        .attr("class", "state-tooltip-density")
+        .attr("class", "state-tooltip-victims")
         .attr("x", 320)
         .attr("y", 45)
         .style("font-size", "15px")
         .style("font-weight", 5)
         .style("text-anchor", "middle");
+
+    vis.tooltip4 = vis.svg.append("text")
+        .attr("class", "state-tooltip-density")
+        .attr("x", 320)
+        .attr("y", 65)
+        .style("font-size", "15px")
+        .style("font-weight", 5)
+        .style("text-anchor", "middle");
+
 
     // add slider control
     // $('#identity-theft-slider-button').change(function() {
@@ -127,8 +136,7 @@ IdentityTheftSquareMap.prototype.initVis = function() {
     // });
 
     vis.tipLine = d3.tip()
-        .attr("class", "d3-tip")
-        .offset([160, 250]);
+        .attr("class", "d3-tip");
 
     vis.tipHTML = d3.tip()
         .attr("class", "d3-tip")
@@ -243,16 +251,25 @@ IdentityTheftSquareMap.prototype.updateVis = function() {
         .on("mouseover", function(d) {
             vis.tooltip1.attr("class", "state-tooltip")
                 .text(d.state);
-            vis.tooltip2.attr("class", "state-tooltip-victims")
-                .text(d3.format(".2f")(vis.displayData[d.state]['Number of victims']) + " victims per year");
-            vis.tooltip3.attr("class", "state-tooltip-density")
+            vis.tooltip2.attr("class", "state-tooltip-years")
+                .text("Between " + vis.yearInterval[0] + " and " + vis.yearInterval[1]);
+            vis.tooltip3.attr("class", "state-tooltip-victims")
+                .text(d3.format(".2f")(vis.displayData[d.state]['Number of victims']) + " victims on average per year");
+            vis.tooltip4.attr("class", "state-tooltip-density")
                 .text(d3.format(".2f")(vis.displayData[d.state]['Victims per 100000 population']) + " victims in every 100,000 people");
+
 
             d3.select(this).style("fill-opacity", 0.2);
 
             vis.selected = d.state;
             linechart.wrangleData(vis.selected);
-            vis.tipLine.show(d);
+            if (d.column > 10) {
+                vis.tipLine.offset([160, -250]).show(d);
+            }
+            else {
+                vis.tipLine.offset([160, 250]).show(d);
+            }
+
         })
         .on("mouseout", function(d) {
             d3.select(this).style("fill-opacity", 0);
