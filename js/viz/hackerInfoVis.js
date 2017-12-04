@@ -49,17 +49,13 @@ HackerInfoVis.prototype.initVis = function(){
         .attr("transform", "translate(" + (vis.width/6 * 5) + "," + (vis.height/2) + ")");
 
     // Scales
-    // vis.color1 = d3.scaleOrdinal().range(['#667f7f', '#667f7f', '#667f7f', '#aabbbb']);
-    // vis.color2 = d3.scaleOrdinal().range(['#b56a4a','#b56a4a','#e1c3b7','#e1c3b7', '#e1c3b7']);
-    // vis.color3 = d3.scaleOrdinal().range(['#b4bacb','#b4bacb','#b4bacb','#667292']);
+    vis.color1 = d3.scaleOrdinal().range(['#667f7f', '#667f7f', '#667f7f', '#aabbbb']);
+    vis.color2 = d3.scaleOrdinal().range(['#b56a4a','#b56a4a','#e1c3b7','#e1c3b7', '#e1c3b7']);
+    vis.color3 = d3.scaleOrdinal().range(['#b4bacb','#b4bacb','#b4bacb','#667292']);
 
-    // vis.color1 = d3.scaleOrdinal().range(['#667f7f', '#667f7f', '#667f7f', '#d5dddd']);
-    // vis.color2 = d3.scaleOrdinal().range(['#b56a4a','#b56a4a','#f1e3dd','#f1e3dd', '#f1e3dd']);
-    // vis.color3 = d3.scaleOrdinal().range(['#b4bacb','#b4bacb','#b4bacb','#495269']);
-
-    vis.color1 = d3.scaleOrdinal().range(['#d5dddd', '#aabbbb', '#8ca3a3', '#667f7f']);
-    vis.color2 = d3.scaleOrdinal().range(['#f1e3dd','#e1c3b7','#cb9780','#b56a4a','#7f4a34']);
-    vis.color3 = d3.scaleOrdinal().range(['#b4bacb','#8790ab','#667292','#495269']);
+    // vis.color1 = d3.scaleOrdinal().range(['#d5dddd', '#aabbbb', '#8ca3a3', '#667f7f']);
+    // vis.color2 = d3.scaleOrdinal().range(['#f1e3dd','#e1c3b7','#cb9780','#b56a4a','#7f4a34']);
+    // vis.color3 = d3.scaleOrdinal().range(['#b4bacb','#8790ab','#667292','#495269']);
 
     vis.radius = Math.min(vis.width/3.2, vis.height) / 2;
 
