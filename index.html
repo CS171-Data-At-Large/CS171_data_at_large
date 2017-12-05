@@ -14,11 +14,23 @@
     <link rel="stylesheet" href="css/jquery.fullPage.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animate.css">
+    <link rel="stylesheet" href="css/drop-theme-arrows.css" />
 
+    <script src="js/library/tether.min.js"></script>
+    <script src="js/library/drop.min.js"></script>
     <script type="text/javascript" src="js/library/jquery.min.js"></script>
     <script type="text/javascript" src="js/library/jquery.fullPage.js"></script>
     <script type="text/javascript">
         $(document).ready(function() {
+
+            dropInstance = new Drop({
+                target: document.querySelector('.ziqi'),
+                content: 'Ziqi Guo<br>M.E. Computational Science and Engineering',
+                classes: 'drop-theme-arrows',
+                position: 'bottom left',
+                openOn: 'hover'
+            })
+
             // variables
             var $isAnimatedAbout = $('#section-about .is-animated'),
                 $isAnimatedAboutFlip = $('#section-about .is-animated-flip'),
@@ -249,27 +261,27 @@
         <div class="section-intro-text">
             <h2 class = "is-animated">Along with the growth of the internet, hackers gained more opportunities </h2>
             <br>
-            <br>
-            <br>
             <h3 class = "is-animated">About hackers: A brief history</h3>
+            <br>
             <p class="text-center is-animated">The term "hacker" was coined in the 1960s at MIT, where extremely skilled and intelligent individuals practiced
                 hardcore programming. Since most people had no idea what hacking was, the term hacker was actually accepted as a positive label slapped onto
                 computer gurus who could push computer systems beyond the defined limits.
-                <br>
+                <br><br>
             </p>
             <p class = "text-center is-animated">
                 During the early 1980s, the term “cyberspace” was coined from a novel called “Neuromancer.”
                 A group called the “414s” was one of the earliest hacker groups to ever get raided by the FBI and charged with 60 computer intrusions.
-                <br>
+                <br><br>
             </p>
 
             <p class="text-center is-animated">
                 As time progressed, Hackers found ways to exploit holes in operating systems of local and remote machines,
                 and this exploitation can be used for good and the bad. While majority of hackers do not commit malicious acts against users,
                 hackers do break into systems for a great variety of reasons.
-                <br>
-                <strong> <em>The ones that intentionally retrieve private data may pose real cybersecurity threat to you regardless </em></strong>.
+                <br><br>
+                <strong> <em>The ones that intentionally retrieve private data may pose real cybersecurity threat to you regardless </em></strong>
             </p>
+
         </div>
     </div>
 
@@ -301,10 +313,10 @@
             <h2 class = "is-animated">Cybersecurity threat is real: Companies are being hacked.</h2>
             <br>
             <br>
-            <br>
             <p class="text-center is-animated">
                 With your activeness on the internet and the prevalence of hackers, how often do you think a data breach happen?
             </p>
+            <br>
             <p class="text-center is-animated">
                 The Equifax incident in 2017 impacted over 140 millions of people in the US.
                 You might have heard about the billions of account information stolen from Yahoo revealed in 2016 as well.
@@ -364,7 +376,6 @@
             <h2 class = "is-animated">A major consequence of cybersecurity threats is Identity Theft Crimes</h2>
             <br>
             <br>
-            <br>
             <p class="text-center is-animated">
                 Every year, people report and complain about their identity theft cases throughout the United States.
                 Unfortunately, the overall number of victims has been risen throughout the time as well.
@@ -418,7 +429,6 @@
     <div class="section" data-anchor="recommendations-intro" id="section-recommendations-intro">
         <div class="section-intro-text">
             <h2 class="is-animated">But there is a silver lining in all of this...</h2>
-            <br>
             <br>
             <br>
             <p class="text-center is-animated">
@@ -535,8 +545,51 @@
 
     <div class="section" data-anchor="about-us" id="section-about-us">
         <div class="container">
-            <h2>About Us</h2>
+            <div class="row">
+                <div class="col-sm12 col-md-6 rec">
+                    <h2>About This Project</h2>
+                    <p>This was a final project for Harvard's CS171 Visualization course, in 2017. The group consists of Cindy Zhao, Michelle Ho and <span class="person-info ziqi">Ziqi Guo</span>.</p>
+                    <p>We would like to thank our advisor Zona Kostic, our Professor Johanna Beyer, and every member of the teaching team, for conducting this amazing course and guiding along our project.</p>
+                    <h3>To Know More</h3>
+                    <ul>
+                        <li>Watch our screencast
+                            <iframe src="http://www.youtube.com/embed/W7qWa52k-nE"
+                                    width="400" height="250" frameborder="0" allowfullscreen></iframe>
+                        </li>
+                        <li>GitHub repository</li>
+                        <li>Process book</li>
+                    </ul>
+                </div>
+                <div class="col-sm12 col-md-6 rec">
+                    <h2>References</h2>
+                    <h3>Data Sources</h3>
+                    <ul>
+                        <li><a href="https://docs.google.com/spreadsheets/d/1Je-YUdnhjQJO_13r8iTeRxpU2pBKuV6RVRHoYCgiMfg/edit#gid=322165570">Information is beautiful: Company data breaches from 2014 to 2017</a></li>
+                        <li>Bureau of Justice Statistics: <a href="https://www.bjs.gov/index.cfm?ty=tp&tid=42">Victims of identity theft in the US</a></li>
+                        <li>Statista: <a href="https://www-statista-com.ezp-prod1.hul.harvard.edu/statistics/276445/number-of-internet-users-in-the-united-states/">Number of internet users in the United States from 2000 to 2016 (in millions)</a></li>
+                        <li>Statista: <a href="https://www-statista-com.ezp-prod1.hul.harvard.edu/statistics/187104/mobile-broadband-subscriptions-per-100-inhabitants-in-the-usa-since-2004/">Mobile broadband subscriptions per 100 inhabitants in the United States from 2004 to 2016</a></li>
+                        <li>Statista: <a href="https://www-statista-com.ezp-prod1.hul.harvard.edu/statistics/441740/time-taken-us-travelers-resolved-identity-theft/">How long did it take you to resolve the issues caused by identity theft</a></li>
+                        <li><a href="https://thycotic.com/resources/black-hat-2017-survey/">2017 Black Hat Hacker Survey</a></li>
 
+                    </ul>
+
+                    <h3>Inspiration and knowledge</h3>
+                    <ul>
+                        <li>Visualization on <a href="http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/">world's biggest data breaches</a></li>
+                        <li><a href="https://www.getcujo.com/blog/recent-data-breaches-equifax/">Lessons Learned from 5 Biggest Data Breaches</a></li>
+                        <li>Information about hackers on <a href="https://en.wikipedia.org/wiki/Hacker">Wikipedia</a></li>
+                    </ul>
+                    <h3>Plug-ins</h3>
+                    <ul>
+                        <li><a href="https://d3js.org/">d3.js</a> (interactive visualization library)</li>
+                        <li><a href="https://getbootstrap.com/">Bootstrap</a> (webpage elements)</li>
+                        <li><a href="https://alvarotrigo.com/fullPage/">fullPage.js</a> (webpage layout)</li>
+                        <li><a href="https://refreshless.com/nouislider/">noUiSlider.js</a> (time slider object)</li>
+
+                        <li><a href="http://fontawesome.io/">Font Awesome</a> (icons)</li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
