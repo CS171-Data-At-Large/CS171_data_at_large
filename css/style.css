@@ -220,7 +220,7 @@ body, html {
 
 /* Animation */
 .anim-typewriter{
-    animation: typewriter 10s steps(80) 1s 1 normal both,
+    animation: typewriter 5s steps(80) 1.5s 1 normal both,
     blinkTextCursor 500ms steps(80) infinite normal;
 }
 @keyframes typewriter{
