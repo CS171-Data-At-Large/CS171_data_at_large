@@ -44,6 +44,10 @@ label {
     color: #5cadd6 !important;
 }
 
+.person-info {
+    font-weight: bold;
+}
+
 
 
 /*********************/
