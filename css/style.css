@@ -700,3 +700,11 @@ tr:nth-child(even) {
 footer .glyphicon-chevron-up{
     font-size: 2em;
 }
+
+.person-info {
+    color: #87bdd8
+}
+
+a {
+    color: #87bdd8
+}

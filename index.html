@@ -25,7 +25,23 @@
 
             dropInstance = new Drop({
                 target: document.querySelector('.ziqi'),
-                content: 'Ziqi Guo<br>M.E. Computational Science and Engineering',
+                content: '<strong>Ziqi Guo</strong><br>M.E. Computational Science and Engineering<br><a href="https://www.linkedin.com/in/ziqi-guo-974aa69a/" target="_blank">LinkedIn</a> / <a href="https://github.com/ziqiguo" target="_blank">GitHub</a>',
+                classes: 'drop-theme-arrows',
+                position: 'bottom left',
+                openOn: 'hover'
+            })
+
+            dropInstance = new Drop({
+                target: document.querySelector('.cindy'),
+                content: '<strong>Xindi Zhao</strong><br>M.S. Computational Science and Engineering<br><a href="https://www.linkedin.com/in/xindi-zhao-128b2a82/" target="_blank">LinkedIn</a> / <a href="https://github.com/cindyxdz" target="_blank">GitHub</a>',
+                classes: 'drop-theme-arrows',
+                position: 'bottom left',
+                openOn: 'hover'
+            })
+
+            dropInstance = new Drop({
+                target: document.querySelector('.michelle'),
+                content: '<strong>Chia Chi (Michelle) Ho</strong><br>M.S. Computational Science and Engineering<br><a href="https://www.linkedin.com/in/chia-chi-michelle-ho-30543391/" target="_blank">LinkedIn</a> / <a href="https://github.com/MichelleCCHo" target="_blank">GitHub</a>',
                 classes: 'drop-theme-arrows',
                 position: 'bottom left',
                 openOn: 'hover'
@@ -231,6 +247,7 @@
     <div class="section extra-margin" data-anchor="internet" id="section-internet">
         <div class="container">
             <h2>Internet has gone viral since 1995</h2>
+            <br>
             <p class="text-center">This isn’t news, but you might not realize how drastic the increase in internet activities has been.
                 <br>
                 <strong><em> Explore the trend by selecting the type of user. Play animation to see how the world changes in action! </em></strong>
@@ -312,7 +329,6 @@
         <div class="section-intro-text">
             <h2 class = "is-animated">Cybersecurity threat is real: Companies are being hacked.</h2>
             <br>
-            <br>
             <p class="text-center is-animated">
                 With your activeness on the internet and the prevalence of hackers, how often do you think a data breach happen?
             </p>
@@ -376,7 +392,6 @@
         <div class="section-intro-text">
             <h2 class = "is-animated">A major consequence of cybersecurity threats is Identity Theft Crimes</h2>
             <br>
-            <br>
             <p class="text-center is-animated">
                 Every year, people report and complain about their identity theft cases throughout the United States.
                 Unfortunately, the overall number of victims has been risen throughout the time as well.
@@ -430,7 +445,6 @@
     <div class="section" data-anchor="recommendations-intro" id="section-recommendations-intro">
         <div class="section-intro-text">
             <h2 class="is-animated">But there is a silver lining in all of this...</h2>
-            <br>
             <br>
             <p class="text-center is-animated">
                 Reports have shown that cybersecurity ranks the very top concern of
@@ -548,10 +562,10 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm12 col-md-6 rec">
-                    <h2>About This Project</h2>
-                    <p>This was a final project for Harvard's CS171 Visualization course, in 2017. The group consists of Cindy Zhao, Michelle Ho and <span class="person-info ziqi">Ziqi Guo</span>.</p>
-                    <p>We would like to thank our advisor Zona Kostic, our Professor Johanna Beyer, and every member of the teaching team, for conducting this amazing course and guiding along our project.</p>
-                    <h3>To Know More</h3>
+                    <h2>About Us</h2>
+                    <p>This was a final project for Harvard's CS171 Visualization course, in 2017. The group consists of <span class="person-info michelle">Michelle Ho</span>, <span class="person-info cindy">Xindi Zhao</span> and <span class="person-info ziqi">Ziqi Guo</span>.</p>
+                    <p>We would like to thank our advisor <strong>Zona Kostic</strong>, our Professor <strong>Johanna Beyer</strong>, and every member of the teaching team, for conducting this amazing course and guiding along our project.</p>
+                    <h3>To know more about this project</h3>
                     <ul>
                         <li>Watch our screencast
                             <iframe src="http://www.youtube.com/embed/W7qWa52k-nE"
@@ -563,7 +577,7 @@
                 </div>
                 <div class="col-sm12 col-md-6 rec">
                     <h2>References</h2>
-                    <h3>Data Sources</h3>
+                    <h3>Data sources</h3>
                     <ul>
                         <li><a href="https://docs.google.com/spreadsheets/d/1Je-YUdnhjQJO_13r8iTeRxpU2pBKuV6RVRHoYCgiMfg/edit#gid=322165570">Information is beautiful: Company data breaches from 2014 to 2017</a></li>
                         <li>Bureau of Justice Statistics: <a href="https://www.bjs.gov/index.cfm?ty=tp&tid=42">Victims of identity theft in the US</a></li>
