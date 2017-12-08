@@ -764,3 +764,16 @@ a {
     transition-delay: 4.5s;
 }
 
+.fa-arrow-circle-right{
+    font-size: 18pt;
+}
+
+.fp-section .hover-instruction{
+    opacity: 0;
+}
+
+.fp-section.active .hover-instruction{
+    opacity: 1;
+    transition: opacity 1s;
+    transition-delay: 6s;
+}

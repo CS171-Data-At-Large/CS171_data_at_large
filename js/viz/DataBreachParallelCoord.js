@@ -377,7 +377,7 @@ DataBreachParallelCoord.prototype.initText = function() {
         "To answer the above questions or even more in your mind, let's look into the recent data breaches cases together. </br>" +
         "You can include/exclude certain variables, color by one column, or filter on selected dimension(s).</br>" +
         "<strong>Click to start with some examples.</strong> " +
-        '</p>';
+        '<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></p>';
     p.innerHTML = texts;
     //p.appendChild(menu);
 
@@ -392,8 +392,8 @@ DataBreachParallelCoord.prototype.view1Text = function() {
     var p = document.getElementById("checkbox-control");
     var view1texts = '<p>' +
         "The following view is filtered only to include the SSN/personal Details lost and colored by the method of leak. </br>You may realize that lost or stolen device and hacked events cause the majority loss of such sensitive and private information. </br>" +
-        "This rings a bell for us - sometimes by being more careful with the hardwares can help protect much personal information. " +
-        '</p>';
+        "This rings a bell for us - sometimes by being more careful with the hardwares can help protect much personal information. </br>" +
+        '<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></p>';
     p.innerHTML = view1texts;
     //p.appendChild(menu);
 }
@@ -403,8 +403,8 @@ DataBreachParallelCoord.prototype.view2Text = function() {
     var view2texts = '<p>' +
         "If we look at credit card information lost and again colored by the method of leak - Hacked events appear to be the major cause. </br>" +
         "This teaches another lesson - we should all be more cautious with our credit cards as they are very vulnerable to hacks. </br>" +
-        "Now click to continue deeper dive into the cases yourself!"
-        '</p>';
+        "Now click to continue deeper dive into the cases yourself!</br>" +
+        '<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></p>';
     p.innerHTML = view2texts;
     //p.appendChild(menu);
 }

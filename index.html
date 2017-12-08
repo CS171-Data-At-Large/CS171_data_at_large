@@ -135,6 +135,20 @@
                     var activeLink= "#myNavbar li a[href='" + activePage + "']";
                     $(activeLink).parent().addClass("active").siblings().removeClass("active");
                 }
+                // set navbar to update on last page of the section
+                else if(activePage === "#hacker-viz"){
+                    $("#myNavbar li a[href='#internet']").parent().addClass("active").siblings().removeClass("active");
+                }
+                else if(activePage === "#data-breaches-viz2"){
+                    $("#myNavbar li a[href='#data-breaches-intro']").parent().addClass("active").siblings().removeClass("active");
+                }
+                else if(activePage === "#consequences-viz2"){
+                    $("#myNavbar li a[href='#consequences-intro']").parent().addClass("active").siblings().removeClass("active");
+                }
+
+                else if(activePage === "#recommendations"){
+                    $("#myNavbar li a[href='#recommendations-intro']").parent().addClass("active").siblings().removeClass("active");
+                }
             });
 
 
@@ -317,7 +331,7 @@
 
     <div class="section extra-margin extra-extra-margin" data-anchor="hacker-viz" id="section-hacker-viz">
         <div class="container">
-            <p class="text-center"> <strong><em>Hover over the reasons to see details. And hover
+            <p class="text-center hover-instruction"> <strong><em>Hover over the reasons to see details. And hover
             over the pie charts to see actual survey questions and responses!</em></strong></p>
             <div class="row" id="vis-2">
                 <div class="col-md-6">
@@ -389,8 +403,6 @@
                 Is there a particular type of method of leak that yields the most data breach incidents?
                 How are the organization types relate to what type of data is lost or if there is any correlation?
                 <br>
-                <strong><em>Explore incidents further with the following plot
-                    and uncover your own understanding of the recent data breach cases! </em></strong>
             </p>
             <br>
             <div id="vis-5">
