@@ -79,36 +79,42 @@ TimeToResolveSquares.prototype.wrangleData = function() {
 TimeToResolveSquares.prototype.updateVis = function() {
     var vis = this;
 
+    vis.types = ["Days", "Weeks", "Months", "Years", "Not-resolved"];
+
     vis.svgtext.append("text")
         .attr("x", 20)
         .attr("y", 220)
         .attr("class", "instruction instruction-line0")
+        .attr("id", "Days")
         .text("");
 
     vis.svgtext.append("text")
         .attr("x", 20)
         .attr("y", 250)
         .attr("class", "instruction instruction-line1")
+        .attr("id", "Weeks")
         .text("Each square represents an identity theft event.");
 
     vis.svgtext.append("text")
         .attr("x", 20)
         .attr("y", 280)
         .attr("class", "instruction instruction-line2")
+        .attr("id", "Months")
         .text("Click on a square to see how long it will take you to resolve.");
 
     vis.svgtext.append("text")
         .attr("x", 20)
         .attr("y", 310)
         .attr("class", "instruction instruction-line3")
+        .attr("id", "Years")
         .text("");
 
     vis.svgtext.append("text")
         .attr("x", 20)
         .attr("y", 340)
         .attr("class", "instruction instruction-line4")
+        .attr("id", "Not-resolved")
         .text("");
-
 
     vis.squares = vis.svg.selectAll(".rect")
         .data(vis.displayData);
@@ -135,7 +141,11 @@ TimeToResolveSquares.prototype.updateVis = function() {
         d3.selectAll(".rect").transition()
             .duration(function(d,i) {return 40*i;})
             .ease(d3.easeQuad)
-            .style("fill", "grey");
+            .style("fill", "grey")
+
+        d3.selectAll(".rect")
+            .on("mouseover", function(d) {})
+            .on("mouseout", function(d) {});
 
         d3.select(".instruction-line0")
             .transition().duration(500)
@@ -193,7 +203,6 @@ TimeToResolveSquares.prototype.updateVis = function() {
                 .style("opacity", 0)
                 .transition().duration(3000)
                 .style("opacity", 1)
-                .style("fill", vis.colorScale(d.Type))
                 .text("you still have not resolved your theft.")
         }
         else {
@@ -202,7 +211,6 @@ TimeToResolveSquares.prototype.updateVis = function() {
                 .style("opacity", 0)
                 .transition().duration(3000)
                 .style("opacity", 1)
-                .style("fill", vis.colorScale(d.Type))
                 .text("it will take you " + d.Type.toLowerCase() + " to resolve the theft.")
         }
 
@@ -222,7 +230,7 @@ TimeToResolveSquares.prototype.updateVis = function() {
             .ease(d3.easeQuad)
             .style("fill", function(d) {
                 return vis.colorScale(d.Type);
-            })
+            });
 
         d3.select(".instruction-line0")
             .transition().delay(delay).duration(500)
@@ -230,40 +238,82 @@ TimeToResolveSquares.prototype.updateVis = function() {
             .transition().duration(1000)
             .style("opacity", 1)
             .style("fill", vis.colorScale(vis.data[0].Time))
-            .text("34% of the victims took days to resolve the theft;");
+            .text("34% of the victims took days to resolve the theft;")
+            .transition().duration(700)
+            .style("fill", "black");
 
 
         d3.select(".instruction-line1")
             .transition().delay(delay).duration(500)
             .style("opacity", 0)
-            .transition().duration(2000)
+            .transition().duration(1500)
             .style("opacity", 1)
             .style("fill", vis.colorScale(vis.data[1].Time))
-            .text("53% of the victims took weeks to resolve the theft;");
+            .text("53% of the victims took weeks to resolve the theft;")
+            .transition().duration(600)
+            .style("fill", "black");
 
         d3.select(".instruction-line2")
             .transition().delay(delay).duration(500)
             .style("opacity", 0)
-            .transition().duration(3000)
+            .transition().duration(2000)
             .style("opacity", 1)
             .style("fill", vis.colorScale(vis.data[2].Time))
-            .text("7% of the victims took months to resolve the theft;");
+            .text("7% of the victims took months to resolve the theft;")
+            .transition().duration(500)
+            .style("fill", "black");
 
         d3.select(".instruction-line3")
             .transition().delay(delay).duration(500)
             .style("opacity", 0)
-            .transition().duration(4000)
+            .transition().duration(3000)
             .style("opacity", 1)
             .style("fill", vis.colorScale(vis.data[3].Time))
-            .text("4% of the victims took years to resolve the theft;");
+            .text("4% of the victims took years to resolve the theft;")
+            .transition().duration(400)
+            .style("fill", "black");
 
         d3.select(".instruction-line4")
             .transition().delay(delay).duration(500)
             .style("opacity", 0)
-            .transition().duration(5000)
+            .transition().duration(4000)
             .style("opacity", 1)
             .style("fill", vis.colorScale(vis.data[4].Time))
-            .text("2% of the victims still have not resolved the theft.");
+            .text("2% of the victims still have not resolved the theft.")
+            .transition().duration(300)
+            .style("fill", "black");
+
+        d3.selectAll(".rect")
+            .on("mouseover", function(d) {
+                d3.select(this).style("stroke", "#f0f0f0")
+                    .style("stroke-width", 3);
+
+                if (d.Type === "Still not resolved") {
+                    d3.select("#Not-resolved").style("fill", vis.colorScale(d.Type));
+                    vis.types.forEach(function(i) {
+                        if (i !== "Not-resolved") {
+                            d3.select("#"+i).style("fill", "#f0f0f0");
+                        }
+                    })
+
+                }
+                else {
+                    d3.select("#" + d.Type).style("fill", vis.colorScale(d.Type));
+                    vis.types.forEach(function(i) {
+                        if (i !== d.Type) {
+                            d3.select("#"+i).style("fill", "#f0f0f0");
+                        }
+                    })
+                }
+
+            })
+            .on("mouseout", function(d) {
+                d3.select(this).style("stroke-width", 0);
+
+                vis.types.forEach(function(i) {
+                    d3.select("#"+i).style("fill", "black");
+                })
+            });
 
         d3.selectAll(".rect").on("click", function(){})
     };

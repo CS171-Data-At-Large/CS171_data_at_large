@@ -24,12 +24,12 @@ IdentityTheftSquareMap = function(_parentElement, _map, _data) {
 
 IdentityTheftSquareMap.prototype.initVis = function() {
     var vis = this;
-    vis.margin = { top: 70, right: 40, bottom: 60, left: 240 };
+    vis.margin = { top: 70, right: 0, bottom: 60, left: 200 };
 
     vis.width = document.getElementById(vis.parentElement).offsetWidth - vis.margin.left - vis.margin.right;
     vis.height = 600 - vis.margin.top - vis.margin.bottom;
 
-    vis.size = 60;
+    vis.size = 70;
 
 
     // SVG drawing area
@@ -47,50 +47,51 @@ IdentityTheftSquareMap.prototype.initVis = function() {
         .range(["#f0f1f5", "#667292"]);
 
     // Add legends
-    vis.xBase = 50;
-    vis.yBase = 70;
+    vis.xBase = 760;
+    vis.yBase = 45;
     vis.svg.append("rect")
         .attr("x", vis.xBase+0).attr("y", vis.yBase+430)
+        .attr("height", 10).attr("width", 10)
+        .style("fill", "#8d9db6");
+
+    vis.svg.append("rect")
+        .attr("x", vis.xBase+15).attr("y", vis.yBase+425)
+        .attr("height", 15).attr("width", 15)
+        .style("fill", "#8d9db6");
+
+    vis.svg.append("rect")
+        .attr("x", vis.xBase+35).attr("y", vis.yBase+420)
         .attr("height", 20).attr("width", 20)
         .style("fill", "#8d9db6");
 
-    vis.svg.append("rect")
-        .attr("x", vis.xBase+25).attr("y", vis.yBase+420)
-        .attr("height", 30).attr("width", 30)
-        .style("fill", "#8d9db6");
-
-    vis.svg.append("rect")
-        .attr("x", vis.xBase+60).attr("y", vis.yBase+410)
-        .attr("height", 40).attr("width", 40)
-        .style("fill", "#8d9db6");
-
     vis.svg.append("text")
-        .attr("x", vis.xBase+115).attr("y", vis.yBase+440)
+        .attr("x", vis.xBase+65).attr("y", vis.yBase+440)
         .text("Number of victims");
 
     vis.svg.append("rect")
-        .attr("x", vis.xBase+300).attr("y", vis.yBase+420)
-        .attr("height", 30).attr("width", 30)
+        .attr("x", vis.xBase+0).attr("y", vis.yBase+460)
+        .attr("height", 15).attr("width", 15)
         .style("fill", "#bccad6");
 
     vis.svg.append("rect")
-        .attr("x", vis.xBase+335).attr("y", vis.yBase+420)
-        .attr("height", 30).attr("width", 30)
+        .attr("x", vis.xBase+20).attr("y", vis.yBase+460)
+        .attr("height", 15).attr("width", 15)
         .style("fill", "#8d9db6");
 
     vis.svg.append("rect")
-        .attr("x", vis.xBase+370).attr("y", vis.yBase+420)
-        .attr("height", 30).attr("width", 30)
+        .attr("x", vis.xBase+40).attr("y", vis.yBase+460)
+        .attr("height", 15).attr("width", 15)
         .style("fill", "#667292");
 
     vis.svg.append("text")
-        .attr("x", vis.xBase+420).attr("y", vis.yBase+440)
+        .attr("x", vis.xBase+65).attr("y", vis.yBase+475)
         .text("Victim density");
 
     // Tooltips
+    var textCenter = 390;
     vis.tooltip1 = vis.svg.append("text")
         .attr("class", "state-tooltip")
-        .attr("x", 320)
+        .attr("x", textCenter)
         .attr("y", -5)
         .attr("stroke", "#8d9db6")
         .style("font-size", "25px")
@@ -99,7 +100,7 @@ IdentityTheftSquareMap.prototype.initVis = function() {
 
     vis.tooltip2 = vis.svg.append("text")
         .attr("class", "state-tooltip-years")
-        .attr("x", 320)
+        .attr("x", textCenter)
         .attr("y", 25)
         .style("font-size", "15px")
         .style("font-weight", 5)
@@ -107,7 +108,7 @@ IdentityTheftSquareMap.prototype.initVis = function() {
 
     vis.tooltip3 = vis.svg.append("text")
         .attr("class", "state-tooltip-victims")
-        .attr("x", 320)
+        .attr("x", textCenter)
         .attr("y", 45)
         .style("font-size", "15px")
         .style("font-weight", 5)
@@ -115,7 +116,7 @@ IdentityTheftSquareMap.prototype.initVis = function() {
 
     vis.tooltip4 = vis.svg.append("text")
         .attr("class", "state-tooltip-density")
-        .attr("x", 320)
+        .attr("x", textCenter)
         .attr("y", 65)
         .style("font-size", "15px")
         .style("font-weight", 5)
