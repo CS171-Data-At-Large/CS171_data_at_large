@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="663ed40f-7050-4c53-b973-41400f10bb6e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viz/identityTheftVis.js" afterPath="$PROJECT_DIR$/js/viz/identityTheftVis.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viz/timeToResolveVis.js" afterPath="$PROJECT_DIR$/js/viz/timeToResolveVis.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -23,8 +23,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="542">
-              <caret line="442" column="29" lean-forward="true" selection-start-line="442" selection-start-column="29" selection-end-line="442" selection-end-column="29" />
+            <state relative-caret-position="19">
+              <caret line="454" column="29" lean-forward="false" selection-start-line="454" selection-start-column="29" selection-end-line="454" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -43,7 +43,7 @@
       <file leaf-file-name="breachCasesBubbleVis.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/viz/breachCasesBubbleVis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="762">
+            <state relative-caret-position="1843">
               <caret line="97" column="8" lean-forward="false" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="31" />
               <folding>
                 <marker date="1512514720270" expanded="true" signature="3931:3944" ph="..." />
@@ -55,7 +55,7 @@
       <file leaf-file-name="breachCasesVis.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/viz/breachCasesVis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
+            <state relative-caret-position="3287">
               <caret line="173" column="22" lean-forward="false" selection-start-line="173" selection-start-column="9" selection-end-line="173" selection-end-column="22" />
               <folding />
             </state>
@@ -69,6 +69,21 @@
               <caret line="33" column="70" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="70" />
               <folding>
                 <element signature="n#!!doc" expanded="true" />
+                <marker date="1512762264167" expanded="true" signature="13264:13691" ph="{...}" />
+                <marker date="1512762264167" expanded="true" signature="15190:15255" ph="{...}" />
+                <marker date="1512762264167" expanded="true" signature="15314:16727" ph="{...}" />
+                <marker date="1512762264167" expanded="true" signature="15341:15430" ph="//..." />
+                <marker date="1512762264167" expanded="true" signature="15507:15581" ph="{...}" />
+                <marker date="1512762264167" expanded="true" signature="15612:15689" ph="{...}" />
+                <marker date="1512762264167" expanded="true" signature="15740:15796" ph="{...}" />
+                <marker date="1512762264167" expanded="true" signature="15986:16172" ph="{...}" />
+                <marker date="1512762264167" expanded="true" signature="16112:16166" ph="{...}" />
+                <marker date="1512762264167" expanded="true" signature="16340:16631" ph="{...}" />
+                <marker date="1512762264167" expanded="true" signature="16445:16596" ph="{...}" />
+                <marker date="1512762264167" expanded="true" signature="16519:16586" ph="{...}" />
+                <marker date="1512762264167" expanded="true" signature="16640:16672" ph="{...}" />
+                <marker date="1512762264167" expanded="true" signature="16774:16862" ph="{...}" />
+                <marker date="1512762264167" expanded="true" signature="16803:16856" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -77,7 +92,7 @@
       <file leaf-file-name="identityTheftVis.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/viz/identityTheftVis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="251">
+            <state relative-caret-position="5605">
               <caret line="295" column="29" lean-forward="false" selection-start-line="295" selection-start-column="29" selection-end-line="295" selection-end-column="29" />
               <folding />
             </state>
@@ -87,8 +102,8 @@
       <file leaf-file-name="timeToResolveVis.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/js/viz/timeToResolveVis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+            <state relative-caret-position="324">
+              <caret line="155" column="33" lean-forward="true" selection-start-line="155" selection-start-column="33" selection-end-line="155" selection-end-column="33" />
               <folding />
             </state>
           </provider>
@@ -150,13 +165,13 @@
       <find>vis.selected</find>
       <find>on(&quot;mouseover</find>
       <find>0.4</find>
-      <find>grey</find>
       <find>rand =</find>
       <find>addhover()</find>
       <find>addhover</find>
       <find>vis.done =</find>
       <find>vis.done</find>
       <find>console.log</find>
+      <find>grey</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -210,6 +225,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -237,8 +254,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -316,11 +331,12 @@
       <workItem from="1512505346889" duration="6958000" />
       <workItem from="1512523787217" duration="8000" />
       <workItem from="1512715363159" duration="10663000" />
+      <workItem from="1512763819006" duration="854000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="76977000" />
+    <option name="totallyTimeSpent" value="77831000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -329,12 +345,12 @@
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20972222" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -505,13 +521,28 @@
           <caret line="33" column="70" lean-forward="false" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="70" />
           <folding>
             <element signature="n#!!doc" expanded="true" />
+            <marker date="1512762264167" expanded="true" signature="13264:13691" ph="{...}" />
+            <marker date="1512762264167" expanded="true" signature="15190:15255" ph="{...}" />
+            <marker date="1512762264167" expanded="true" signature="15314:16727" ph="{...}" />
+            <marker date="1512762264167" expanded="true" signature="15341:15430" ph="//..." />
+            <marker date="1512762264167" expanded="true" signature="15507:15581" ph="{...}" />
+            <marker date="1512762264167" expanded="true" signature="15612:15689" ph="{...}" />
+            <marker date="1512762264167" expanded="true" signature="15740:15796" ph="{...}" />
+            <marker date="1512762264167" expanded="true" signature="15986:16172" ph="{...}" />
+            <marker date="1512762264167" expanded="true" signature="16112:16166" ph="{...}" />
+            <marker date="1512762264167" expanded="true" signature="16340:16631" ph="{...}" />
+            <marker date="1512762264167" expanded="true" signature="16445:16596" ph="{...}" />
+            <marker date="1512762264167" expanded="true" signature="16519:16586" ph="{...}" />
+            <marker date="1512762264167" expanded="true" signature="16640:16672" ph="{...}" />
+            <marker date="1512762264167" expanded="true" signature="16774:16862" ph="{...}" />
+            <marker date="1512762264167" expanded="true" signature="16803:16856" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/viz/breachCasesVis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
+        <state relative-caret-position="3287">
           <caret line="173" column="22" lean-forward="false" selection-start-line="173" selection-start-column="9" selection-end-line="173" selection-end-column="22" />
           <folding />
         </state>
@@ -519,7 +550,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/viz/identityTheftVis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="251">
+        <state relative-caret-position="5605">
           <caret line="295" column="29" lean-forward="false" selection-start-line="295" selection-start-column="29" selection-end-line="295" selection-end-column="29" />
           <folding />
         </state>
@@ -527,7 +558,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/js/viz/breachCasesBubbleVis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
+        <state relative-caret-position="1843">
           <caret line="97" column="8" lean-forward="false" selection-start-line="97" selection-start-column="8" selection-end-line="97" selection-end-column="31" />
           <folding>
             <marker date="1512514720270" expanded="true" signature="3931:3944" ph="..." />
@@ -537,16 +568,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="542">
-          <caret line="442" column="29" lean-forward="true" selection-start-line="442" selection-start-column="29" selection-end-line="442" selection-end-column="29" />
+        <state relative-caret-position="19">
+          <caret line="454" column="29" lean-forward="false" selection-start-line="454" selection-start-column="29" selection-end-line="454" selection-end-column="29" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/js/viz/timeToResolveVis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
+        <state relative-caret-position="324">
+          <caret line="155" column="33" lean-forward="true" selection-start-line="155" selection-start-column="33" selection-end-line="155" selection-end-column="33" />
           <folding />
         </state>
       </provider>
