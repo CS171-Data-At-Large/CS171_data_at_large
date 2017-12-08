@@ -534,7 +534,7 @@ body, html {
     stroke: #fff;
     stroke-width: 1px;
 }
-
+/*
 #vis-breach-cases-parallel pre {
     width: 100%;
     height: 300px;
@@ -542,8 +542,29 @@ body, html {
     tab-size: 40;
     font-size: 10px;
     overflow: auto;
+    text-align: center;
 }
+*/
+#checkbox-control{
+    padding-top: 20px;
+    font-family: Courier;
+    width: 100%;
+    height: 110px;
+    margin: 6px 12px;
+    tab-size: 40;
+    background-color: #f5f5f5;
+    border-color: #cccccc;
+    font-size: 14px;
+    text-align: center;
+}
+#checkbox-control p{
+    display: inline;
+}
+/*
+#checkbox-control:hover {
 
+    background-color: #cccccc;
+}*/
 #vis-5 {
     margin-bottom: 2em;
 }

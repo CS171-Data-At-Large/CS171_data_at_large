@@ -18,7 +18,7 @@ var svg = d3.select("#chart-area").append("svg")
 // Will be used to the save the loaded JSON data
 var allData = [];
 var choices = ["Year of Occurrence", "Organization Type", "Number of Records Lost", "Method of Leak", "Data Sensitivity"];
-
+var currentView = 0;
 // Date parser to convert strings to date objects
 var parseTime = d3.timeParse("%Y");
 var formatTime = d3.timeFormat("%Y");

@@ -66,7 +66,7 @@ DataBreachParallelCoord.prototype.initVis = function(){
     vis.ctx.lineWidth = 1.5;
     vis.ctx.scale(vis.devicePixelRatio, vis.devicePixelRatio);
 
-    vis.zoomView();
+    vis.initText();
 };
 
 /*
@@ -355,30 +355,60 @@ DataBreachParallelCoord.prototype.updateAxes = function(){
  Add drop down menu to the DOM
  */
 DataBreachParallelCoord.prototype.addCheckbox = function() {
-    var p = document.getElementById("text-container");
+    var p = document.getElementById("checkbox-control");
     //var menu = document.createElement("form");
     var selections = '<form><div class="form-group">' +
-        '<p><strong>Click on axis title to color by the chosen axis, brush to select, and/or use checkboxes to select axes to include in the plot:</strong></p>' +
-        '<input type="checkbox" class="AxesCheckbox" value="Method of Leak" checked="checked" onchange="updateAxes()"> Method of Leak &#9' +
-        '<input type="checkbox" class="AxesCheckbox" value="Data Sensitivity" checked="checked" onchange="updateAxes()"> Data Sensitivity &#9' +
-        '<input type="checkbox" class="AxesCheckbox" value="Organization Type" checked="checked" onchange="updateAxes()">Organization Type &#9' +
-        '<input type="checkbox" class="AxesCheckbox" value="Year of Occurrence" checked="checked" onchange="updateAxes()">Year of Occurrence &#9' +
+        '<p><strong>Click on axis title to color by the chosen axis, brush to select, and/or use checkboxes to select axes to include in the plot:</strong></p></br>' +
+        '<input type="checkbox" class="AxesCheckbox" value="Method of Leak" checked="checked" onchange="updateAxes()"> Method of Leak &#9' + '<p class="indent"></p>' +
+        '<input type="checkbox" class="AxesCheckbox" value="Data Sensitivity" checked="checked" onchange="updateAxes()"> Data Sensitivity &#9' + '<p class="indent"></p>' +
+        '<input type="checkbox" class="AxesCheckbox" value="Organization Type" checked="checked" onchange="updateAxes()">Organization Type &#9' +'<p class="indent"></p>' +
+        '<input type="checkbox" class="AxesCheckbox" value="Year of Occurrence" checked="checked" onchange="updateAxes()">Year of Occurrence &#9' + '<p class="indent"></p>' +
         '<input type="checkbox" class="AxesCheckbox" value="Number of Records Lost" checked="checked" onchange="updateAxes()"> Records Lost &#9 ' +
-        '</div>';
+        '</div></form>';
 
     p.innerHTML = selections;
     //p.appendChild(menu);
 }
 
 DataBreachParallelCoord.prototype.initText = function() {
+    var vis = this;
     var p = document.getElementById("checkbox-control");
-    var texts = '<pre id = "text-container"><p>' +
-        "Let's take a quick look at the following graph which is filtered only to include the SSN/personal Details lost. When color by the method of leak, you may realize that lost or stolen device, together with hacked events, cause the greatest number of loss of such sensitive and extremely private information. </br>" +
-        "This rings a bell for us - sometimes by being more careful with the hardwares can help protect much personal information. " +
-        '</p></pre>';
+    var texts = '<p>' +
+        "To answer the above questions or even more in your mind, let's look into the recent data breaches cases together. </br>" +
+        "You can include/exclude certain variables, color by one column, or filter on selected dimension(s).</br>" +
+        "<strong>Click to start with some examples.</strong> " +
+        '</p>';
     p.innerHTML = texts;
     //p.appendChild(menu);
+
+    $("#checkbox-control").click(function(){
+        if(currentView <= 2){
+            vis.zoomView()
+        }
+    });
 }
+
+DataBreachParallelCoord.prototype.view1Text = function() {
+    var p = document.getElementById("checkbox-control");
+    var view1texts = '<p>' +
+        "The following view is filtered only to include the SSN/personal Details lost and colored by the method of leak. </br>You may realize that lost or stolen device and hacked events cause the majority loss of such sensitive and private information. </br>" +
+        "This rings a bell for us - sometimes by being more careful with the hardwares can help protect much personal information. " +
+        '</p>';
+    p.innerHTML = view1texts;
+    //p.appendChild(menu);
+}
+
+DataBreachParallelCoord.prototype.view2Text = function() {
+    var p = document.getElementById("checkbox-control");
+    var view2texts = '<p>' +
+        "If we look at credit card information lost and again colored by the method of leak - Hacked events appear to be the major cause. </br>" +
+        "This teaches another lesson - we should all be more cautious with our credit cards as they are very vulnerable to hacks. </br>" +
+        "Now click to continue deeper dive into the cases yourself!"
+        '</p>';
+    p.innerHTML = view2texts;
+    //p.appendChild(menu);
+}
+
 
 DataBreachParallelCoord.prototype.zoomView = function() {
     var vis = this;
@@ -386,12 +416,19 @@ DataBreachParallelCoord.prototype.zoomView = function() {
     // In the first step no data wrangling/filtering needed
     //vis.displayData = vis.data;
 
-
+    var viewVar;
     vis.displayData = vis.data;
 
-
+    if (currentView ===0){
+        viewVar = "SSN/Personal details";
+        vis.view1Text();
+    }
+    else if (currentView ===1){
+        viewVar = "Credit card information";
+        vis.view2Text();
+    }
     vis.displayData = vis.data.filter(function(d) {
-        return d["Data Sensitivity"] == "SSN/Personal details";
+        return d["Data Sensitivity"] == viewVar;
     });
     console.log(vis.displayData);
 
@@ -410,11 +447,7 @@ DataBreachParallelCoord.prototype.zoomView = function() {
     console.log(vis.displayDimensions);
     vis.selectedval = "Method of Leak";
     // Update the visualization
-    vis.updateVis();
-    vis.initText();
-
- //   window.setTimeout(vis.addCheckbox(), 10000);
-    window.setTimeout(function(d){
+    if (currentView ==2){
         vis.addCheckbox();
         choices = [];
         d3.selectAll(".AxesCheckbox").each(function(d){
@@ -424,6 +457,19 @@ DataBreachParallelCoord.prototype.zoomView = function() {
             }
         });
         vis.wrangleData();
-    }, 10000);
+    }
+    else{
+        vis.updateVis();
+    }
+    currentView += 1;
+    console.log(currentView);
 
 };
+
+$("#checkbox-control").hover(
+    function(){
+        if(currentView<=2) {$(this).css("background-color", "#cccccc")
+        }
+    },
+    function(){$(this).css("background-color", "#f5f5f5")}
+);
