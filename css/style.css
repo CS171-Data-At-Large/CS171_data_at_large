@@ -729,3 +729,38 @@ footer .glyphicon-chevron-up{
 a {
     color: #87bdd8
 }
+
+
+.fp-section #vis-hacker-reasons{
+    opacity: 0;
+}
+
+
+.fp-section #vis-hacker-info{
+    opacity: 0;
+}
+
+
+.fp-section .annotation{
+    opacity: 0;
+}
+
+.fp-section.active #vis-hacker-reasons{
+    opacity: 1;
+    transition: opacity 4s;
+    transition-delay: 1s;
+}
+
+
+.fp-section.active #vis-hacker-info{
+    opacity: 1;
+    transition: opacity 4s;
+    transition-delay: 3s;
+}
+
+.fp-section.active .annotation{
+    opacity: 1;
+    transition: opacity 3s;
+    transition-delay: 4.5s;
+}
+
