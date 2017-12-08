@@ -80,13 +80,17 @@
                         $isAnimatedAbout.addClass('animated fadeInUp');
                         $isAnimatedAbout.eq(0).css('animation-delay', '0.5s');
                         $isAnimatedAbout.eq(1).css('animation-delay', '1.5s');
-                        $isAnimatedAbout.eq(2).css('animation-delay', '2.5s');
+                        $isAnimatedAbout.eq(2).css('animation-delay', '1.5s');
 
                         $isAnimatedAboutFlip.addClass('animated flipInY');
-                        $isAnimatedAboutFlip.eq(0).css('animation-delay', '3.5s');
-                        $isAnimatedAboutFlip.eq(1).css('animation-delay', '4.5s');
-                        $isAnimatedAboutFlip.eq(2).css('animation-delay', '5.5s');
-                        $isAnimatedAboutFlip.eq(3).css('animation-delay', '6.5s');
+                        $isAnimatedAboutFlip.eq(0).css('animation-delay', '2.5s');
+                        $isAnimatedAboutFlip.eq(0).css('animation-duration','2s');
+                        $isAnimatedAboutFlip.eq(1).css('animation-delay', '3s');
+                        $isAnimatedAboutFlip.eq(1).css('animation-duration','2s');
+                        $isAnimatedAboutFlip.eq(2).css('animation-delay', '3.5s');
+                        $isAnimatedAboutFlip.eq(2).css('animation-duration','2s');
+                        $isAnimatedAboutFlip.eq(3).css('animation-delay', '4s');
+                        $isAnimatedAboutFlip.eq(3).css('animation-duration','2s');
                     }
 
                     else if( index === 3 && nextIndex === 4 ) {
@@ -331,7 +335,7 @@
 
     <div class="section extra-margin extra-extra-margin" data-anchor="hacker-viz" id="section-hacker-viz">
         <div class="container">
-            <p class="text-center"> <strong><em>Hover over the reasons to see details. And hover
+            <p class="text-center hover-instruction"> <strong><em>Hover over the reasons to see details. And hover
             over the pie charts to see actual survey questions and responses!</em></strong></p>
             <div class="row" id="vis-2">
                 <div class="col-md-6">
@@ -403,8 +407,6 @@
                 Is there a particular type of method of leak that yields the most data breach incidents?
                 How are the organization types relate to what type of data is lost or if there is any correlation?
                 <br>
-                <strong><em>Explore incidents further with the following plot
-                    and uncover your own understanding of the recent data breach cases! </em></strong>
             </p>
             <br>
             <div id="vis-5">

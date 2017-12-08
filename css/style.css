@@ -747,33 +747,33 @@ a {
 
 .fp-section.active #vis-hacker-reasons{
     opacity: 1;
-    transition: opacity 4s;
-    transition-delay: 1s;
+    transition: opacity 3s;
+    transition-delay: 0s;
 }
 
 
 .fp-section.active #vis-hacker-info{
     opacity: 1;
-    transition: opacity 4s;
-    transition-delay: 3s;
+    transition: opacity 3s;
+    transition-delay: 1.5s;
 }
 
 .fp-section.active .annotation{
     opacity: 1;
     transition: opacity 3s;
-    transition-delay: 4.5s;
+    transition-delay: 4s;
 }
 
 .fa-arrow-circle-right{
     font-size: 18pt;
 }
 
-.fp-section .text-center{
+.fp-section .hover-instruction{
     opacity: 0;
 }
 
-.fp-section.active .text-center{
+.fp-section.active .hover-instruction{
     opacity: 1;
-    transition: opacity 1s;
-    transition-delay: 6s;
+    transition: opacity 1.5s;
+    transition-delay: 3s;
 }
