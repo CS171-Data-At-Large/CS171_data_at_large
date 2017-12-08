@@ -392,8 +392,8 @@ DataBreachParallelCoord.prototype.view1Text = function() {
     var p = document.getElementById("checkbox-control");
     var view1texts = '<p>' +
         "The following view is filtered only to include the SSN/personal Details lost and colored by the method of leak. </br>You may realize that lost or stolen device and hacked events cause the majority loss of such sensitive and private information. </br>" +
-        "This rings a bell for us - sometimes by being more careful with the hardwares can help protect much personal information. " +
-        '</p>';
+        "This rings a bell for us - sometimes by being more careful with the hardwares can help protect much personal information. </br>" +
+        '<i class="fa fa-arrow-circle-right" aria-hidden="true"></i></p>';
     p.innerHTML = view1texts;
     //p.appendChild(menu);
 }

@@ -764,3 +764,16 @@ a {
     transition-delay: 4.5s;
 }
 
+.fa-arrow-circle-right{
+    font-size: 18pt;
+}
+
+.fp-section .text-center{
+    opacity: 0;
+}
+
+.fp-section.active .text-center{
+    opacity: 1;
+    transition: opacity 1s;
+    transition-delay: 6s;
+}
