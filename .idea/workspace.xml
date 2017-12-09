@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="663ed40f-7050-4c53-b973-41400f10bb6e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/process_book.html" afterPath="$PROJECT_DIR$/process_book.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -20,7 +20,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="257">
@@ -30,12 +30,25 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="process_book.html" pinned="false" current-in-tab="true">
+      <file leaf-file-name="process_book.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/process_book.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="474" column="41" lean-forward="true" selection-start-line="474" selection-start-column="41" selection-end-line="474" selection-end-column="41" />
-              <folding />
+            <state relative-caret-position="1120">
+              <caret line="507" column="41" lean-forward="true" selection-start-line="507" selection-start-column="41" selection-end-line="507" selection-end-column="41" />
+              <folding>
+                <marker date="1512846323532" expanded="true" signature="27694:27715" ph="..." />
+                <marker date="1512846323532" expanded="true" signature="27694:27733" ph="..." />
+                <marker date="1512846323532" expanded="true" signature="27694:27750" ph="..." />
+                <marker date="1512846323532" expanded="true" signature="27694:28019" ph="..." />
+                <marker date="1512846323532" expanded="true" signature="27694:28026" ph="..." />
+                <marker date="1512846323532" expanded="true" signature="27823:27889" ph="..." />
+                <marker date="1512846323532" expanded="true" signature="27923:28006" ph="..." />
+                <marker date="1512846323532" expanded="true" signature="28076:28806" ph="..." />
+                <marker date="1512846323532" expanded="true" signature="28104:28798" ph="..." />
+                <marker date="1512846323532" expanded="true" signature="28217:28787" ph="..." />
+                <marker date="1512846323532" expanded="true" signature="28857:29083" ph="..." />
+                <marker date="1512846323532" expanded="true" signature="28934:29004" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -320,12 +333,12 @@
       <workItem from="1512523787217" duration="8000" />
       <workItem from="1512715363159" duration="10663000" />
       <workItem from="1512763819006" duration="998000" />
-      <workItem from="1512790552638" duration="4480000" />
+      <workItem from="1512790552638" duration="4639000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="82455000" />
+    <option name="totallyTimeSpent" value="82614000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -548,14 +561,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="208" column="74" lean-forward="false" selection-start-line="208" selection-start-column="72" selection-end-line="208" selection-end-column="74" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/lib/webstorm.jar!/resources/html5-schema/html5/sectional.rnc">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="274">
@@ -566,8 +571,29 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/process_book.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="474" column="41" lean-forward="true" selection-start-line="474" selection-start-column="41" selection-end-line="474" selection-end-column="41" />
+        <state relative-caret-position="1120">
+          <caret line="507" column="41" lean-forward="true" selection-start-line="507" selection-start-column="41" selection-end-line="507" selection-end-column="41" />
+          <folding>
+            <marker date="1512846323532" expanded="true" signature="27694:27715" ph="..." />
+            <marker date="1512846323532" expanded="true" signature="27694:27733" ph="..." />
+            <marker date="1512846323532" expanded="true" signature="27694:27750" ph="..." />
+            <marker date="1512846323532" expanded="true" signature="27694:28019" ph="..." />
+            <marker date="1512846323532" expanded="true" signature="27694:28026" ph="..." />
+            <marker date="1512846323532" expanded="true" signature="27823:27889" ph="..." />
+            <marker date="1512846323532" expanded="true" signature="27923:28006" ph="..." />
+            <marker date="1512846323532" expanded="true" signature="28076:28806" ph="..." />
+            <marker date="1512846323532" expanded="true" signature="28104:28798" ph="..." />
+            <marker date="1512846323532" expanded="true" signature="28217:28787" ph="..." />
+            <marker date="1512846323532" expanded="true" signature="28857:29083" ph="..." />
+            <marker date="1512846323532" expanded="true" signature="28934:29004" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="208" column="74" lean-forward="false" selection-start-line="208" selection-start-column="72" selection-end-line="208" selection-end-column="74" />
           <folding />
         </state>
       </provider>
