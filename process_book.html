@@ -66,7 +66,7 @@
                 <li><a href="#sources">Data Sources</a></li>
                 <li><a href="#design-evolution">Design Evolution</a></li>
                 <li><a href="#logistics">Logistics</a></li>
-                <li><a href="#conclusion">Conclusion</a></li>
+                <li><a href="#conclusion">Closing Thoughts</a></li>
             </ul>
         </div>
     </div>
@@ -335,10 +335,26 @@
                 <img src="img/process_book/identity_theft_vis_1_design1.png" height="300px">
             </div>
             <h3>Second design</h3>
+            <p class="text-justify">
+                One main drawback of a polar area chart is that readers will be visually draw to the most outstanding 3-4 slices
+                and will potentially skip over the smaller slices. Especially when we have 50 states to visualize,
+                the polar area chart might not be the most suitable type of graph. <br>
+                <br>
+                For this reason, we redesigned the visualization and used a modified version of a choropleth chart instead.
+                In this design, we represent each state not based on its actual geographical shape but squares with uniform areas.
+                This removed the effect of states’ varying sizes might have on how readers will comprehend the graph.
+                <br>
+                <br>
+                By clicking on to each area, a line chart and table corresponding to the state would be displayed to the right of the map to see the trend over the years for the selected state.
+            </p>
             <div class="text-center">
                 <img src="img/process_book/identity_theft_vis_1_design2.png" height="400px">
             </div>
             <h3>Final design</h3>
+            <p class="text-justify">
+                Having implemented the second design, we realized that having a map, a line chart and a table on the same page is a bit overwhelming visually.
+                Therefore, we decided to implement the line chart as a tooltip, appearing on mouseover, and remove the table altogether.
+            </p>
             <div class="text-center">
                 <img src="img/process_book/identity_theft_vis_1_final_design.png" height="500px">
             </div>
@@ -351,10 +367,24 @@
             <div class="text-center">
                 <img src="img/process_book/resolve_time_design1.png" height="200px">
             </div>
+            <p class="text-justify">
+                The main point of this visualization is to show the distribution of the time needed to resolve identity
+                theft cases. To avoid ending the project with a bar chart, we wanted to capture audience interest by
+                implementing an interactive/game-like visualization that contains a random component.
+                The initial design was inspired by many of the projects from previous years.
+            </p>
             <h3>Second design</h3>
+            <p class="text-justify">
+                After consulting with our TF, Zona, we felt that it was best for us to come up with an original design. The idea that
+                we finally settled on was a grid of squares where the user would be prompted to click. The click would then prompt
+                an animation to reveal a color that represents a category of time spent on resolving the identity theft. The color
+                is randomly chosen based on the distribution based on previous victims data.
+            </p>
             <div class="text-center">
                 <img src="img/process_book/resolve_time_design2.png" height="200px">
             </div>
+
+            <p class="text-justify">The actual implementation is shown below.</p>
             <h3>Final design</h3>
             <div class="text-center">
                 <div class="row">
@@ -442,10 +472,15 @@
 <!--conclusions section-->
 <div id="conclusion">
     <div class="container">
+        <br>
+        <br>
         <h1 class="text-center">Closing Thoughts</h1>
-        <br>
-        <br>
-        <p class="text-justify"></p>
+        <p class="text-justify">
+            We hope that you have not only enjoyed our interactive visualizations but also learned something interesting and practical about
+            protecting your personal cyber space. It has been tremendously fun to apply what we've learned in CS171 and to explore beyond
+            what was taught. Creating complex interactive visualizations and designing both user-friendly and visually appealing website were
+            by no means easy tasks, but it was a great learning journey, and we feel very satisfied with what we've achieved as a team.
+        </p>
     </div>
 
 </div>
