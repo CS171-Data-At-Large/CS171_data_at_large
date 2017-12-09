@@ -6,7 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="663ed40f-7050-4c53-b973-41400f10bb6e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/js/viz/timeToResolveVis.js" afterPath="$PROJECT_DIR$/js/viz/timeToResolveVis.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -23,8 +23,18 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="19">
-              <caret line="454" column="29" lean-forward="false" selection-start-line="454" selection-start-column="29" selection-end-line="454" selection-end-column="29" />
+            <state relative-caret-position="257">
+              <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="process_book.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/process_book.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -71,19 +81,6 @@
                 <element signature="n#!!doc" expanded="true" />
                 <marker date="1512762264167" expanded="true" signature="13264:13691" ph="{...}" />
                 <marker date="1512762264167" expanded="true" signature="15190:15255" ph="{...}" />
-                <marker date="1512762264167" expanded="true" signature="15314:16727" ph="{...}" />
-                <marker date="1512762264167" expanded="true" signature="15341:15430" ph="//..." />
-                <marker date="1512762264167" expanded="true" signature="15507:15581" ph="{...}" />
-                <marker date="1512762264167" expanded="true" signature="15612:15689" ph="{...}" />
-                <marker date="1512762264167" expanded="true" signature="15740:15796" ph="{...}" />
-                <marker date="1512762264167" expanded="true" signature="15986:16172" ph="{...}" />
-                <marker date="1512762264167" expanded="true" signature="16112:16166" ph="{...}" />
-                <marker date="1512762264167" expanded="true" signature="16340:16631" ph="{...}" />
-                <marker date="1512762264167" expanded="true" signature="16445:16596" ph="{...}" />
-                <marker date="1512762264167" expanded="true" signature="16519:16586" ph="{...}" />
-                <marker date="1512762264167" expanded="true" signature="16640:16672" ph="{...}" />
-                <marker date="1512762264167" expanded="true" signature="16774:16862" ph="{...}" />
-                <marker date="1512762264167" expanded="true" signature="16803:16856" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -99,11 +96,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="timeToResolveVis.js" pinned="false" current-in-tab="true">
+      <file leaf-file-name="timeToResolveVis.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/js/viz/timeToResolveVis.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="324">
-              <caret line="155" column="33" lean-forward="true" selection-start-line="155" selection-start-column="33" selection-end-line="155" selection-end-column="33" />
+            <state relative-caret-position="58">
+              <caret line="141" column="51" lean-forward="false" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="51" />
               <folding />
             </state>
           </provider>
@@ -194,9 +191,9 @@
         <option value="$PROJECT_DIR$/js/viz/breachCasesBubbleVis.js" />
         <option value="$PROJECT_DIR$/js/viz/breachCasesVis.js" />
         <option value="$PROJECT_DIR$/css/style.css" />
-        <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/js/viz/identityTheftVis.js" />
         <option value="$PROJECT_DIR$/js/viz/timeToResolveVis.js" />
+        <option value="$PROJECT_DIR$/index.html" />
       </list>
     </option>
   </component>
@@ -225,8 +222,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -254,6 +249,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -331,12 +328,13 @@
       <workItem from="1512505346889" duration="6958000" />
       <workItem from="1512523787217" duration="8000" />
       <workItem from="1512715363159" duration="10663000" />
-      <workItem from="1512763819006" duration="854000" />
+      <workItem from="1512763819006" duration="998000" />
+      <workItem from="1512790552638" duration="537000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77831000" />
+    <option name="totallyTimeSpent" value="78512000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -371,7 +369,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/js/identityTheftLineVis.js" />
     <entry file="file://$PROJECT_DIR$/js/identityTheftVis.js" />
     <entry file="file://$PROJECT_DIR$/js/main_ziqi.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -523,19 +520,6 @@
             <element signature="n#!!doc" expanded="true" />
             <marker date="1512762264167" expanded="true" signature="13264:13691" ph="{...}" />
             <marker date="1512762264167" expanded="true" signature="15190:15255" ph="{...}" />
-            <marker date="1512762264167" expanded="true" signature="15314:16727" ph="{...}" />
-            <marker date="1512762264167" expanded="true" signature="15341:15430" ph="//..." />
-            <marker date="1512762264167" expanded="true" signature="15507:15581" ph="{...}" />
-            <marker date="1512762264167" expanded="true" signature="15612:15689" ph="{...}" />
-            <marker date="1512762264167" expanded="true" signature="15740:15796" ph="{...}" />
-            <marker date="1512762264167" expanded="true" signature="15986:16172" ph="{...}" />
-            <marker date="1512762264167" expanded="true" signature="16112:16166" ph="{...}" />
-            <marker date="1512762264167" expanded="true" signature="16340:16631" ph="{...}" />
-            <marker date="1512762264167" expanded="true" signature="16445:16596" ph="{...}" />
-            <marker date="1512762264167" expanded="true" signature="16519:16586" ph="{...}" />
-            <marker date="1512762264167" expanded="true" signature="16640:16672" ph="{...}" />
-            <marker date="1512762264167" expanded="true" signature="16774:16862" ph="{...}" />
-            <marker date="1512762264167" expanded="true" signature="16803:16856" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -566,18 +550,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/js/viz/timeToResolveVis.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="454" column="29" lean-forward="false" selection-start-line="454" selection-start-column="29" selection-end-line="454" selection-end-column="29" />
+        <state relative-caret-position="58">
+          <caret line="141" column="51" lean-forward="false" selection-start-line="141" selection-start-column="51" selection-end-line="141" selection-end-column="51" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/js/viz/timeToResolveVis.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="155" column="33" lean-forward="true" selection-start-line="155" selection-start-column="33" selection-end-line="155" selection-end-column="33" />
+        <state relative-caret-position="257">
+          <caret line="31" column="30" lean-forward="false" selection-start-line="31" selection-start-column="30" selection-end-line="31" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/process_book.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
