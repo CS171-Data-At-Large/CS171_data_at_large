@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>CS171 Data at Large: Process Book</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Kanit|Raleway" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        body{
+            background-color: #F8F8F8;
+        }
+        h1{
+            color: #5cadd6;
+        }
+        p, div.container li{
+            font-size: 1.3em;
+        }
+    </style>
+</head>
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<!--navbar-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#processNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Back to Project Page</a>
+        </div>
+        <div class="collapse navbar-collapse" id="processNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#overview-motivation">Overview & Motivation</a></li>
+                <li><a href="#goals-questions">Goals & Questions</a></li>
+                <li><a href="#sources">Data Sources</a></li>
+                <li><a href="#design-evolution">Design Evolution</a></li>
+                <li><a href="#logistics">Logistics</a></li>
+                <li><a href="#conclusion">Conclusion</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--home section-->
+<div id="home">
+    <div class="container text-center">
+        <br>
+        <br>
+        <h1>Process Book for Project Data at Large</h1>
+        <img src="img/process_book/homepage.png" width="1000px">
+    </div>
+</div>
+
+<!--overview and motivation section-->
+<div id="overview-motivation">
+    <div class="container">
+        <br>
+        <br>
+        <h1 class="text-center">Overview & Motivation</h1>
+        <p class="text-justify">
+            Internet has become an integral part of modern life. As we take advantage of the conveniences that the digital age offers,
+            we are becoming increasingly vulnerable to cybercrimes such as fraud and identity theft. Inspired by the recent data breach
+            incident from Equinfax that affected over 143 million people in the United States and a
+            <a href="http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/" target="_blank">
+                visualization of company data breach cases</a>, we would like to investigate and understand
+            the increasingly serious issues with data breaches, use visualizations to raise the public’s awareness in monitoring the safety
+            of their personal data, and offer proactive approaches in cybersecurity protection.
+            <br>
+            <br>
+            The project is consisted of 4 main parts: We begin by describing the rise of the Internet age and transitioning to a
+            brief background of hackers and why they hack. Subsequently, we show selected incidents of company data breaches to make the
+            point that the data we implicitly entrusted to companies are susceptible to cyberattacks. The consequences of these data breaches
+            are often cybercrimes on an individual level, so we follow up by visualizing identity theft trends and the time needed to resolve
+            it. Lastly, we aim to make suggestions on creating a safer online existence.
+        </p>
+    </div>
+
+</div>
+
+<!--goals and question section-->
+<div id="goals-questions">
+    <div class="container">
+        <br>
+        <br>
+        <h1 class="text-center">Goals & Questions</h1>
+        <p class="text-justify">
+            The main goal of this project is to use visualizations to raise the public’s awareness in monitoring the safety
+            of their personal data, and offer approaches in cybersecurity protection. To do so, we would like to explore the
+            following questions:
+
+            <br>
+            <br>
+            <ol>
+                <li><strong>Concerning the internet and the hackers -- </strong></li>
+                    <ul>
+                        <li>How has internet usage in the U.S. evolved over time? </li>
+                        <li>Who are hackers? Why do they hack? </li>
+                    </ul>
+                <br>
+                <li><strong>Concerning the data that we entrust to companies --  </strong></li>
+                    <ul>
+                        <li>How secure is the data we entrust to companies while we use the internet? </li>
+                        <li>Are incidents of company data breaches increasing over time?  </li>
+                        <li>Which type of breach are companies most susceptible to?  </li>
+                        <li>How sensitive are the data being breached (e.g. contents of emails, credit card information, or social security)?  </li>
+                        <li>Are there certain types of organization more prone to certain type of data breaches?</li>
+                    </ul>
+                <br>
+                <li><strong>Concerning the consequences of data breaches -- </strong></li>
+                    <ul>
+                        <li>What is the trend of identity theft in each state over time? </li>
+                        <li>How long does it take to resolve identity theft issues </li>
+                    </ul>
+                <br>
+                <li><strong>Concerning creating a safer online existence -- </strong></li>
+                    <ul>
+                        <li>What are the steps we can take to improve the safety of our online existence? </li>
+                    </ul>
+                <br>
+            </ol>
+        </p>
+
+        <h1 class="text-center">Project Tasks</h1>
+        <p class="text-justify">
+            <ol>
+                <li><strong><em>Data acquisition and wrangling: </em></strong>
+                    Data are acquired from the sources listed in the next section, Questions & Data Sources.
+                    Most of the datasets are fairly clean, so we performed minimal data cleaning in this step.
+
+                    However, many of the datasets come in the form of .xlsx files with multiple excel sheets per data file, which
+                    we converted into .csv or .json files. We also implemented a python script ("WorldBankDataParse.py" in the
+                    data/internet-use folder) to parse data from
+                    <a href="https://data.worldbank.org/indicator/IT.NET.USER.ZS" target="_blank">the World Data Bank</a> into .csv files.
+
+                </li>
+                <br>
+                <li><strong><em>Visualization and interactivity implementation:  </em></strong>
+                    We designed implemented 10 visualizations, and the details of these visualizations are shown in
+                    <a href="#design-evolution">Design Evolution</a> section.
+                </li>
+                <br>
+                <li><strong><em>Acquisition/production and compilation of texts for storytelling: </em></strong>
+
+                </li>
+                <br>
+                <li><strong><em>Website design and implementation: </em></strong>
+
+                </li>
+                <br>
+            </ol>
+        </p>
+    </div>
+</div>
+
+<!--data sources section-->
+<div id="sources">
+    <div class="container">
+        <h1 class="text-center">Data Sources</h1>
+        <p class="text-justify">All of our data sources are listed in the main website. Here, we re-present data sources as they relate to our project sections.</p>
+        <br>
+        <br>
+        <p class="text-justify">
+            <ol>
+                <li><strong>Data Sources for concerning the internet and the hackers -- </strong></li>
+                <ul>
+                    <li>Wold Data Bank: <a href="https://data.worldbank.org/indicator/IT.NET.USER.ZS" target="_blank">Individuals using the Internet (% of population)</a></li>
+                    <li>Wold Data Bank: <a href="https://data.worldbank.org/indicator/IT.CEL.SETS.P2" target="_blank">Mobile cellular subscriptions (per 100 people) </a></li>
+                    <li><a href="https://thycotic.com/resources/black-hat-2017-survey/" target="_blank">2017 Black Hat Hacker Survey</a></li>
+                    <li><a href="https://www.getcujo.com/blog/7-reasons-hackers-hack/" target="_blank">7 reasons why hackers hack</a></li>
+                </ul>
+                <br>
+                <li><strong>Data Sources concerning the data that we entrust to companies --  </strong></li>
+                <ul>
+                    <li><a href="https://docs.google.com/spreadsheets/d/1Je-YUdnhjQJO_13r8iTeRxpU2pBKuV6RVRHoYCgiMfg/edit#gid=322165570" target="_blank">Information is beautiful: Company data breaches from 2004 to 2017</a></li>
+                </ul>
+                <br>
+                <li><strong>Data Sources concerning the consequences of data breaches -- </strong></li>
+                <ul>
+                    <li>Bureau of Justice Statistics: <a href="https://www.bjs.gov/index.cfm?ty=tp&tid=42" target="_blank">Victims of identity theft in the US</a></li>
+                    <li>Statista: <a href="https://www-statista-com.ezp-prod1.hul.harvard.edu/statistics/441740/time-taken-us-travelers-resolved-identity-theft/" target="_blank">How long did it take you to resolve the issues caused by identity theft</a></li>
+                </ul>
+                <br>
+                <li><strong>Concerning creating a safer online existence -- </strong></li>
+                <ul>
+                    <li><a href="https://www.getcujo.com/blog/recent-data-breaches-equifax/" target="_blank">Lessons Learned from 5 Biggest Data Breaches</a></li>
+                </ul>
+                <br>
+            </ol>
+        </p>
+    </div>
+</div>
+
+
+<!--design evolution section-->
+<div id="design-evolution">
+    <div class="container">
+        <h1 class="text-center">Design Evolution</h1>
+        <p class="text-justify">Here, we present the design evolution of each of our 10 visualizations. As you will see, many of
+        the visualizations underwent drastic re-designs.</p>
+        <div class="container" id="vis-1-evolution">
+            <h2> Internet usage </h2>
+            <h3> Initial design </h3>
+            <div class="text-center">
+                <img src="img/process_book/internet_usage_design1.png" height="300px">
+                <br>
+                <br>
+                <img src="img/process_book/internet_usage_design2.png" height="200px">
+            </div>
+
+            <h3> Final design </h3>
+            <div class="text-center">
+                <img src="img/process_book/internet_usage_final_design.png" width="1000px">
+            </div>
+        </div>
+
+        <div class="container" id="vis-2-evolution">
+            <h2>About hackers</h2>
+            <h3>Initial design</h3>
+            <p class="text-justify">This is one of the visualizations for which we not only changed the design, but we
+                completely changed the content. Originally, the designed
+            story flow was to visualize various online activities and compare their potential for exposing the user
+            to cybersecurity threats. The design sketches are shown below.</p>
+            <div class="text-center">
+                <img src="img/process_book/online_activities_design1.png" height="200px">
+            </div>
+
+            <p>However, we felt that bar charts are not very visually exciting, and at the same time, we came across a hackers survey
+            that we find interesting and informative. We thought giving some insight into why and how hackers came to be
+            is a better transition to discussing cybersecurity issues since we wouldn't be nearly as worried about cybersecurity if
+            there weren't any hackers.</p>
+            <h3>Second design</h3>
+            <div class="text-center">
+                <img src="img/process_book/hacker_vis_design1.png" width="1000px">
+            </div>
+
+            <p>While we liked </p>
+
+            <h3>Final design</h3>
+            <div class="text-center">
+                <img src="img/process_book/hacker_vis_final_design.png" width="1000px">
+            </div>
+        </div>
+
+        <div class="container" id="vis-3-evolution">
+            <h2>Data breach cases - Visualization 1</h2>
+            <h3>Initial design</h3>
+            <div class="text-center">
+                <img src="img/process_book/data_breach_vis_1_design1.png" height="300px">
+            </div>
+
+            <h3>Final design</h3>
+            <div class="text-center">
+                <img src="img/process_book/data_breach_vis_1_final_design.png" width="1000px">
+            </div>
+
+        </div>
+
+        <div class="container" id="vis-4-evolution">
+            <h2>Data breach cases - Visualization 2</h2>
+            <h3>Initial design</h3>
+            <div class="text-center">
+                <img src="img/process_book/data_breach_vis_2_design1.png" height="300px">
+            </div>
+            <h3>Final design</h3>
+            <div class="text-center">
+                <img src="img/process_book/data_breach_vis_2_final_design.png" width="1000px">
+            </div>
+        </div>
+
+        <div class="container" id="vis-5-evolution">
+            <h2>Trends in identity theft</h2>
+            <h3>Initial design</h3>
+            <div class="text-center">
+                <img src="img/process_book/identity_theft_vis_1_design1.png" height="300px">
+            </div>
+            <h3>Second design</h3>
+            <div class="text-center">
+                <img src="img/process_book/identity_theft_vis_1_design2.png" height="400px">
+            </div>
+            <h3>Final design</h3>
+            <div class="text-center">
+                <img src="img/process_book/identity_theft_vis_1_final_design.png" height="500px">
+            </div>
+
+        </div>
+
+        <div class="container" id="vis-6-evolution">
+            <h2>Time to resolve identity theft cases</h2>
+            <h3>Initial design</h3>
+            <div class="text-center">
+                <img src="img/process_book/resolve_time_design1.png" height="200px">
+            </div>
+            <h3>Second design</h3>
+            <div class="text-center">
+                <img src="img/process_book/resolve_time_design2.png" height="200px">
+            </div>
+            <h3>Final design</h3>
+            <div class="text-center">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>View 1</p>
+                        <img src="img/process_book/resolve_time_final_design_view1.png" width="500px">
+                    </div>
+                    <div class="col-md-6">
+                        <p>View 2</p>
+                        <img src="img/process_book/resolve_time_final_design_view2.png" width="500px">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>View 3</p>
+                        <img src="img/process_book/resolve_time_final_design_view3.png" width="500px">
+                    </div>
+                    <div class="col-md-6">
+                        <p>View 4</p>
+                        <img src="img/process_book/resolve_time_final_design_view4.png" width="500px">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--logistics section-->
+<div id="logistics">
+    <div class="container">
+        <h1 class="text-center">Project Logistics</h1>
+    </div>
+</div>
+
+<!--conclusions section-->
+<div id="conclusion">
+    <div class="container">
+        <h1 class="text-center">Closing Thoughts</h1>
+    </div>
+
+</div>
+
+
+<!-- Add footer -->
+<footer class="text-center">
+    <a class="up-arrow" href="#myPage" data-toggle="tooltip" title="TO TOP">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a><br><br>
+    <p>Website Made By Michelle Ho, Cindy Zhao, Ziqi Guo</p>
+</footer>
+
+
+<!-- Load JS libraries -->
+<script src="js/library/jquery.min.js"></script>
+<script src="js/library/bootstrap.min.js"></script>
+
+<!--// Add smooth scrolling to all links in navbar and footer-->
+<script>
+    $(document).ready(function(){
+        // Initialize Tooltip
+        $('[data-toggle="tooltip"]').tooltip();
+
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function(){
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    })
+</script>
+</body>
+</html>
