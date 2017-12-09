@@ -19,6 +19,30 @@
         p, div.container li{
             font-size: 1.3em;
         }
+
+        table {
+            width:60%;
+            margin: auto;
+        }
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+            text-align: left;
+            font-size: 1.3em;
+        }
+        table#t01 tr:nth-child(even) {
+            background-color: #eee;
+        }
+        table#t01 tr:nth-child(odd) {
+            background-color:#fff;
+        }
+        table#t01 th {
+            background-color: #667292;
+            color: white;
+        }
     </style>
 </head>
 <body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -54,6 +78,8 @@
         <br>
         <br>
         <h1>Process Book for Project Data at Large</h1>
+        <br>
+        <br>
         <img src="img/process_book/homepage.png" width="1000px">
     </div>
 </div>
@@ -127,6 +153,9 @@
             </ol>
         </p>
 
+        <br>
+        <br>
+
         <h1 class="text-center">Project Tasks</h1>
         <p class="text-justify">
             <ol>
@@ -158,7 +187,8 @@
         </p>
     </div>
 </div>
-
+<br>
+<br>
 <!--data sources section-->
 <div id="sources">
     <div class="container">
@@ -201,32 +231,47 @@
 <!--design evolution section-->
 <div id="design-evolution">
     <div class="container">
+        <br>
+        <br>
         <h1 class="text-center">Design Evolution</h1>
-        <p class="text-justify">Here, we present the design evolution of each of our 10 visualizations. As you will see, many of
-        the visualizations underwent drastic re-designs.</p>
+        <p class="text-justify">Here, we present the design evolution of each of our 10 visualizations, which are grouped into 6 composite
+            visualizations. As you will see, many of the visualizations underwent drastic re-designs.</p>
         <div class="container" id="vis-1-evolution">
-            <h2> Internet usage </h2>
+            <h2> Visualization 1 - Internet usage </h2>
+            <p class="text-justify">The major point we wanted to make with this visualization is that internet
+                had taken over the world very quickly since its commercialization in 1995.</p>
             <h3> Initial design </h3>
             <div class="text-center">
-                <img src="img/process_book/internet_usage_design1.png" height="300px">
-                <br>
-                <br>
-                <img src="img/process_book/internet_usage_design2.png" height="200px">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="img/process_book/internet_usage_design1.png" height="300px">
+                    </div>
+                    <div class="col-md-6">
+                        <img src="img/process_book/internet_usage_design2.png" height="200px">
+                    </div>
+                </div>
             </div>
 
             <h3> Final design </h3>
+            <p class="text-justify">We felt that the initial design, while capable of conveying our point that
+            internet usage had grown tremendously, line and bar charts are not very eye-catching serving as the very first
+            visualization of the project. Therefore, we gathered additional data from the Wrold Data Bank in order to
+            be able to plot a chloropleth. We also implemented more interactivity by introducing animation and buttons to
+            change views.</p>
             <div class="text-center">
                 <img src="img/process_book/internet_usage_final_design.png" width="1000px">
             </div>
         </div>
 
         <div class="container" id="vis-2-evolution">
-            <h2>About hackers</h2>
+            <h2>Visualization 2 - About hackers</h2>
             <h3>Initial design</h3>
             <p class="text-justify">This is one of the visualizations for which we not only changed the design, but we
                 completely changed the content. Originally, the designed
             story flow was to visualize various online activities and compare their potential for exposing the user
-            to cybersecurity threats. The design sketches are shown below.</p>
+            to cybersecurity threats. The design sketch is shown below.</p>
+            <br>
+            <br>
             <div class="text-center">
                 <img src="img/process_book/online_activities_design1.png" height="200px">
             </div>
@@ -240,7 +285,16 @@
                 <img src="img/process_book/hacker_vis_design1.png" width="1000px">
             </div>
 
-            <p>While we liked </p>
+            <p>This design allows the user to hover over the reasons donut chart to read more about each reasons of why
+            hackers hack. It also allows the user to hover over the pie charts to see the results of 3 interesting
+            survey questions that revealed just how easy it is for hackers to hack into a system and how most hackers feel sympathetic/
+            empathetic to other hackers who have been arrested. <br>
+            <br>
+            One problem with this design was the coloring of the pie charts. The colors represent one category of response
+            from the survey, but they do not reflect the message in the annotations. For instance, 88% of hackers can break into
+            a system in less than 12 hours denotes the sum of 3 answers (0-2 hours, 2-6 hours and 6-12 hours). Therefore,
+            we decided to color the pie charts to reflect the message rather than simply color each response a different shade. This resulted
+            in the final design as shown below.</p>
 
             <h3>Final design</h3>
             <div class="text-center">
@@ -249,7 +303,7 @@
         </div>
 
         <div class="container" id="vis-3-evolution">
-            <h2>Data breach cases - Visualization 1</h2>
+            <h2>Visualization 3 - Data breach cases - Stacked Area/Bubble Chart</h2>
             <h3>Initial design</h3>
             <div class="text-center">
                 <img src="img/process_book/data_breach_vis_1_design1.png" height="300px">
@@ -263,7 +317,7 @@
         </div>
 
         <div class="container" id="vis-4-evolution">
-            <h2>Data breach cases - Visualization 2</h2>
+            <h2>Visualization 4 -Data breach cases - Parallel Coordinates</h2>
             <h3>Initial design</h3>
             <div class="text-center">
                 <img src="img/process_book/data_breach_vis_2_design1.png" height="300px">
@@ -275,7 +329,7 @@
         </div>
 
         <div class="container" id="vis-5-evolution">
-            <h2>Trends in identity theft</h2>
+            <h2>Visualization 5 - Trends in identity theft</h2>
             <h3>Initial design</h3>
             <div class="text-center">
                 <img src="img/process_book/identity_theft_vis_1_design1.png" height="300px">
@@ -292,7 +346,7 @@
         </div>
 
         <div class="container" id="vis-6-evolution">
-            <h2>Time to resolve identity theft cases</h2>
+            <h2>Visualization 6 - Time to resolve identity theft cases</h2>
             <h3>Initial design</h3>
             <div class="text-center">
                 <img src="img/process_book/resolve_time_design1.png" height="200px">
@@ -334,6 +388,54 @@
 <div id="logistics">
     <div class="container">
         <h1 class="text-center">Project Logistics</h1>
+        <p class="text-justify">
+            The work load of this project was split evenly across team members, and we were in constant communication
+            to make sure everyone was on the same page and agreed to the designs. While
+            everyone had a fair chunk of all aspects of the project (from web design to implementing
+            visualizations), each member also had focus areas, and they are
+            shown below:
+        </p>
+        <br>
+        <br>
+        <p class="text-center">
+        <table id="t01">
+            <tr>
+                <th>Member</th>
+                <th>Role</th>
+            </tr>
+            <tr>
+                <td>Michelle</td>
+                <td>
+                    Setting up and organizing the github repo<br>
+                    Overall website layout
+                    </ul>
+                </td>
+            </tr>
+            <tr>
+                <td>Cindy</td>
+                <td>Draw sketches and organize visualization/interaction ideas<br>
+                    Evaluate implementations and project targeting
+                </td>
+            </tr>
+            <tr>
+                <td>Ziqi</td>
+                <td>Maintain process bookm<br>
+                    Wrangle data to useable format
+                </td>
+            </tr>
+        </table>
+        </p>
+
+        <br>
+        <br>
+        <p class="text-justify">
+            We roughly followed the time line below:
+        </p>
+        <div class="text-center">
+            <img src="img/process_book/timeline.png" width="800px">
+        </div>
+
+
     </div>
 </div>
 
@@ -341,6 +443,9 @@
 <div id="conclusion">
     <div class="container">
         <h1 class="text-center">Closing Thoughts</h1>
+        <br>
+        <br>
+        <p class="text-justify"></p>
     </div>
 
 </div>
