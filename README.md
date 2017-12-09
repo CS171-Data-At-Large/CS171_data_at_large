@@ -2,7 +2,9 @@
 
 This is a data visualization project that explores the topic of cybersecurity and is part of the final projects of Harvard's CS171 course in 2017. 
 
-#### Project Overview
+
+
+### Project Overview
 
 Inspired by the recent data breach incident from Equinfax that affected over 143 million people in the United States and a [visualization of company data breach cases](http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/), we would like to investigate and understand the increasingly serious issues with data breaches, use visualizations to raise the public’s awareness in monitoring the safety of their personal data, and offer approaches in cybersecurity protection. 
 
@@ -13,13 +15,13 @@ Inspired by the recent data breach incident from Equinfax that affected over 143
 
 
 
-#### **Navigating the Project Folder** 
+### **Navigating the Project Folder** 
 
 Under the root folder, there are two index files. `index.html` is the main project index, and `process_book.html` is the process book index, which is also accessible through the main project. The `data` folder contains all the data used in the website, together with the code that we used to obtain the data. In the `js` folder, the `library` folder contains the external javascripts we incorporated, and the `viz` folder contains our own implementations. Each `.js` corresponds to one visualization in the website. 
 
 
 
-#### **Navigating the Website Interface** 
+### **Navigating the Website Interface** 
 
 In the website, there is a navigation panel at the top of the page which can be used to jump to specific sections of the site. More specifically, *About the Project* gives an overview of the storyline of the project. The following four sections correspond to four main visualization chapters which you can browse through one by one. The last section *About Us* contains more information about the project, some references and our contact information.
 
