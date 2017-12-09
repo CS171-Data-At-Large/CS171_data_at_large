@@ -97,7 +97,7 @@
             <a href="http://www.informationisbeautiful.net/visualizations/worlds-biggest-data-breaches-hacks/" target="_blank">
                 visualization of company data breach cases</a>, we would like to investigate and understand
             the increasingly serious issues with data breaches, use visualizations to raise the public’s awareness in monitoring the safety
-            of their personal data, and offer proactive approaches in cybersecurity protection.
+            of their personal data, and offer approaches in cybersecurity protection.
             <br>
             <br>
             The project is consisted of 4 main parts: We begin by describing the rise of the Internet age and transitioning to a
@@ -118,7 +118,7 @@
         <h1 class="text-center">Goals & Questions</h1>
         <p class="text-justify">
             The main goal of this project is to use visualizations to raise the public’s awareness in monitoring the safety
-            of their personal data, and offer approaches in cybersecurity protection. To do so, we would like to explore the
+            of their personal data, and offer recommendations in cybersecurity protection. To do so, we would like to explore the
             following questions:
 
             <br>
@@ -160,7 +160,7 @@
         <p class="text-justify">
             <ol>
                 <li><strong><em>Data acquisition and wrangling: </em></strong>
-                    Data are acquired from the sources listed in the next section, Questions & Data Sources.
+                    Data were acquired from the sources listed in <a href="sources">Data Sources</a> section.
                     Most of the datasets are fairly clean, so we performed minimal data cleaning in this step.
 
                     However, many of the datasets came in the form of .xlsx files with multiple excel sheets per data file, which
@@ -175,11 +175,14 @@
                     <a href="#design-evolution">Design Evolution</a> section.
                 </li>
                 <br>
-                <li><strong><em>Acquisition/production and compilation of texts for storytelling: </em></strong> We read up on new articles revolving around cybersecurity. Then collected the ones that we felt helpful for telling a story and making the website more informative.
+                <li><strong><em>Acquisition/production and compilation of texts for storytelling: </em></strong>
+                    We read up on new articles about cybersecurity and collected the ones that we felt helpful for telling a story and making the website more informative.
 
                 </li>
                 <br>
-                <li><strong><em>Website design and implementation: </em></strong> The layout of the website went through multiple iterations of design, by taking into account fresh opinions from first-time readers, as well as our retrospection. The goal of the website design is to help readers effortlessly grasp the story behind the visualizations, and take away some knowledge or inspiration.
+                <li><strong><em>Website design and implementation: </em></strong>
+                    The layout of the website went through multiple design iterations as we collected user feedback and reflected retrospectively.
+                    We aimed to use web design to facilitate user understanding of how to explore the visualizations as well as the story telling aspect.
 
                 </li>
                 <br>
@@ -234,14 +237,15 @@
         <br>
         <br>
         <h1 class="text-center">Design Evolution</h1>
-        <p class="text-justify">Here, we present the design evolution of each of our 10 visualizations, which are grouped into 6 composite
-            visualizations. As you will see, many of the visualizations underwent drastic re-designs which are aimed to achieve a balance between
+        <p class="text-justify">Here, we present the design evolution of each of our 10 visualizations, which were grouped into 6 composite
+            visualizations. As you will see, most visualizations underwent drastic re-designs with the intention to achieve a balance between
             story telling and visual effect. </p>
         <div class="container" id="vis-1-evolution">
             <h2> Visualization 1 - Internet usage </h2>
             <p class="text-justify">The major point we wanted to make with this visualization is that internet
-                had taken over the world very quickly since its commercialization in 1995. In the initial design, we hope
-                to achieve this by using a set of graphs that displayed the trend in different perspectives.</p>
+                had taken over the world very quickly since its commercialization in 1995. In the initial design, we hoped
+                to achieve this by using a set of graphs that displayed the trend from different perspectives. We imagined
+            that we would use a slide show format to deliver these graphs visually.</p>
             <h3> Initial design </h3>
             <div class="text-center">
                 <div class="row">
@@ -256,10 +260,10 @@
 
             <h3> Final design </h3>
             <p class="text-justify">We felt that the initial design, while capable of conveying our point that
-            internet usage had grown tremendously, line and bar charts are not very eye-catching serving as the very first
+            internet usage had grown tremendously, line and bar charts are not very eye-catching, especially serving as the very first
             visualization of the project. Therefore, we gathered additional data from the Wrold Data Bank in order to
             be able to plot a choropleth. We also enabled more interactivity by introducing animation and buttons to
-            switch views. The linear growth in the line chart, coupled with the darkening map, tell a much more convincing
+            switch views. The linear growth in the line chart, coupled with the darkening map, tell a much more attention-grabbing
             story than the previous design.</p>
             <div class="text-center">
                 <img src="img/process_book/internet_usage_final_design.png" width="1000px">
@@ -279,10 +283,10 @@
                 <img src="img/process_book/online_activities_design1.png" height="200px">
             </div>
 
-            <p>However, we felt that bar charts are not very visually exciting and at the same time, we came across a hackers survey
-            that we find interesting and informative. We thought giving some insight into why and how hackers came to be
-            is a better transition to discussing cybersecurity issues since we wouldn't be nearly as worried about cybersecurity if
-            there weren't any hackers.</p>
+            <p>After having implemented the bar charts, we felt that a plain bar chart was not a very exciting visual transition.
+                Fortunately, we came across a hackers survey that we found interesting and informative. We thought giving some insights
+                into why and how hackers came to be would be a better transition to discussing cybersecurity issues
+                since we wouldn't be nearly as worried about cybersecurity if there weren't any hackers.</p>
             <h3>Second design</h3>
             <div class="text-center">
                 <img src="img/process_book/hacker_vis_design1.png" width="1000px">
@@ -293,10 +297,11 @@
             survey questions that revealed just how easy it is for hackers to hack into a system and how most hackers feel sympathetic/
             empathetic to other hackers who have been arrested. <br>
             <br>
-            One problem with this design was the coloring of the pie charts. The colors represent one category of response
-            from the survey, but they do not reflect the message in the annotations. For instance, 88% of hackers can break into
-            a system in less than 12 hours denotes the sum of 3 answers (0-2 hours, 2-6 hours and 6-12 hours). Therefore,
-            we decided to color the pie charts to reflect the message rather than simply color each response with a different shade. This resulted
+            One problem with this design is the coloring of the pie charts. Each color represents one category of response
+            from the survey, but the color scheme overall does not reflect the message in the annotations.
+                For instance, the annotation, 88% of hackers can break into a system in less than 12 hours,
+                reflects the sum of 3 answers (0-2 hours, 2-6 hours and 6-12 hours). Therefore,
+            we decided to color the pie charts to match the message rather than simply color each response with a different shade. This resulted
             in the final design as shown below.</p>
 
             <h3>Final design</h3>
@@ -304,14 +309,14 @@
                 <img src="img/process_book/hacker_vis_final_design.png" width="1000px">
             </div>
 
-            <p>In the final design, we also animated the appearance of the charts and annotations to direct the focus of the readers
+            <p>In the final design, we also animated the appearance of the charts and annotations to direct viewer attention
             to the relevant elements.</p>
         </div>
 
         <div class="container" id="vis-3-evolution">
             <h2>Visualization 3 - Data breach cases - Stacked Area/Bubble Chart</h2>
             <h3>Initial design</h3>
-            <p>The goal of this visualization is to visualize the overall trend of data breach cases, and also allow more detailed cross-section
+            <p>The goal of this visualization is to visualize the overall trend of data breach cases and also allow more detailed cross-sectional
             views of the cases by clicking certain area of the stacked area chart, or referring to the bubble chart in the right.</p>
             <div class="text-center">
                 <img src="img/process_book/data_breach_vis_1_design1.png" height="300px">
@@ -322,8 +327,8 @@
                 bubble chart, the variables which are mapped to the y-axis and size, actually have the same values in the data. Essentially, we only have one dimension
                 to visualize. We tackled this problem by modifying the y-axis to the index of individual breach cases. So essentially we are stacking breach cases into
                 pillars, with the size of the circle indicating the severity of the breach.</p>
-            <p>The interactivity also worked as expected. When an area in the stacked area chart is clicked, the bubble chart will also change accordingly to reflect only
-            the selected category. Both charts will also listen to the "visualize by" drop-down selection to be color-coded by different variables.</p>
+            <p>The interactivity also worked as expected. When an area in the stacked area chart is clicked, the bubble chart filters accordingly to show only
+            the selected category. Both charts are able to listen to the "visualize by" drop-down selection to view different variables.</p>
             <div class="text-center">
                 <img src="img/process_book/data_breach_vis_1_final_design.png" width="1000px">
             </div>
@@ -333,20 +338,43 @@
         <div class="container" id="vis-4-evolution">
             <h2>Visualization 4 -Data breach cases - Parallel Coordinates</h2>
             <h3>Initial design</h3>
-            <p>This chart uses the same data as Visualization 3, but presents the data in a fundamentally different way. A parallel coordinate chart is a great way for
-            readers to explore the dataset with a whole set of interactions. They can select how many axes are plotted, brush on individual axes to filter categories, and
-            click on axis title to color the lines by the selected axis.</p>
+            <p>This chart uses the same data as Visualization 3, but it presents the data in a fundamentally different way.
+                The goal of this visualization is to allow the viewers to dive in the dataset and uncover their
+                own understanding. A parallel coordinate chart is a great way for this purpose.
+                Our design allows the viewer to specify the axes, color by different axes and brush on individual axis to filter observations.</p>
             <div class="text-center">
                 <img src="img/process_book/data_breach_vis_2_design1.png" height="300px">
             </div>
             <h3>Final design</h3>
             <p>The changes we made mainly lie in the animation. In our testing iterations, we received some feedback regarding this graph being too cluttered without a key message.
-            Some also reflected that they were not sure how to use the visualization. Therefore, we decided to adopt a more guided approach to introduce this visualization. The grey
-            panel in the middle will contain some instructions. The whole visualization will start from a few selected views that are meant to guide the readers how to use the visualiation,
-            and give them some clues regarding what kind of patterns can be revealed by the visualization. Only after sufficient guidance is given, the plot will be turnt to the readers for
-            any kind of exploration.</p>
+            Some also reflected that they were not sure how to use the visualization. Therefore, we decided to adopt a more guided approach. The grey
+            panel in the middle first show instructions (view 1). The viewer is then prompted to click. Upon clicking, the visualization appear with
+                the first default view (view 2), which is meant to show a specific message. The accompanying description and more instruction also appear in the grey
+                panel. We decided to provide 2 default views (view 2 and view 3). Finally, after yet another viewer click, the visualization
+                is revealed in its entirety (view 4) to allow maximum interactivity and user exploration.</p>
             <div class="text-center">
-                <img src="img/process_book/data_breach_vis_2_final_design.png" width="1000px">
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>View 1</p>
+                        <img src="img/process_book/data_breach_vis_2_final_design_view1.png" width="500px">
+                    </div>
+                    <div class="col-md-6">
+                        <p>View 2</p>
+                        <img src="img/process_book/data_breach_vis_2_final_design_view2.png" width="500px">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <p>View 3</p>
+                        <img src="img/process_book/data_breach_vis_2_final_design_view3.png" width="500px">
+                    </div>
+                    <div class="col-md-6">
+                        <p>View 4</p>
+                        <img src="img/process_book/data_breach_vis_2_final_design_view4.png" width="500px">
+                    </div>
+                </div>
+
             </div>
         </div>
 
@@ -358,16 +386,17 @@
             </div>
             <h3>Second design</h3>
             <p class="text-justify">
-                One main drawback of a polar area chart is that readers will be visually drawn to the most outstanding 3-4 slices
-                and will potentially skip over the smaller slices. Especially when we have 50 states to visualize,
-                the polar area chart might not be the most suitable type of graph. <br>
+                One main drawback of a polar area chart is that viewer would only be visually drawn to the most visible 3-4 slices.
+                Therefore, the polar area chart might not be the most suitable type of graph, especially given that there would have been
+                50 slices to represent 50 states.
+                 <br>
                 <br>
-                For this reason, we redesigned the visualization and used a modified version of a choropleth chart instead.
+                For this reason, we re-designed the visualization and used a modified version of a choropleth chart instead.
                 In this design, we represent each state not based on its actual geographical shape but squares with uniform areas.
-                This removed the effect of states’ varying sizes might have on how readers will comprehend the graph.
+                This removes the lie factor that often is associated with choropleths.
                 <br>
                 <br>
-                By clicking on to each area, a line chart and table corresponding to the state would be displayed to the right of the map to see the trend over the years for the selected state.
+                By clicking on to each area, a line chart and a table corresponding to the state would be displayed to the right of the map to show the trend over the years for the selected state.
             </p>
             <div class="text-center">
                 <img src="img/process_book/identity_theft_vis_1_design2.png" height="400px">
@@ -375,7 +404,7 @@
             <h3>Final design</h3>
             <p class="text-justify">
                 Having implemented the second design, we realized that having a map, a line chart and a table on the same page is a bit overwhelming visually.
-                The line chart and table also serve the same purpose. Therefore, we decided to implement the line chart as a tooltip, appearing on mouseover, and remove the table altogether.
+                The line chart and table also served the same purpose. Therefore, we decided to implement the line chart as a tooltip, appearing on mouseover, and remove the table altogether.
                 This created a much cleaner view that allows the user to focus on the spatial distribution first, and then drill down to temporal distribution of specific states.
             </p>
             <div class="text-center">
@@ -392,16 +421,18 @@
             </div>
             <p class="text-justify">
                 The main point of this visualization is to show the distribution of the time needed to resolve identity
-                theft cases. To avoid ending the project with a rather conventional form of visualization, we wanted to capture audience's interest by
+                theft cases. To avoid ending the project with a rather conventional form of visualization, we wanted to capture audience interest by
                 implementing an interactive/game-like visualization that contain some randomness.
             </p>
             <h3>Second design</h3>
             <p class="text-justify">
-                After consulting with our TF, Zona, we felt that it was best for us to come up with an original design that could end
-                the visualization on a high note. The idea that
+                Since the dart visualization had been implemented in previous projects, we felt that it was best for us
+                to come up with an original design that could end
+                the project on a high note. After consulting with our TF, Zona, the idea that
                 we finally settled on was a grid of squares where the user would be prompted to click. The click would then trigger
-                a series of animation to reveal a color that represents a category of time spent on resolving the identity theft. The color
-                is randomly chosen based on the distribution based on previous victims data.
+                a series of animation to reveal first a color that represents a category of time spent on resolving identity theft
+                followed by the whole distribution. The first color
+                is randomly chosen based on the distribution of previous victims data.
             </p>
             <div class="text-center">
                 <img src="img/process_book/resolve_time_design2.png" height="200px">
