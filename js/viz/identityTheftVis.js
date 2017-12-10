@@ -287,12 +287,15 @@ IdentityTheftSquareMap.prototype.updateVis = function() {
 
             vis.selected = d.state;
             linechart.wrangleData(vis.selected);
+            var offsety = 160;
+            var offsetx = 250;
             if (d.column > 10) {
-                vis.tipLine.offset([160, -250]).show(d);
+                offsetx = -250;
             }
-            else {
-                vis.tipLine.offset([160, 250]).show(d);
+            if (d.row < 2) {
+                offsety = 255;
             }
+            vis.tipLine.offset([offsety, offsetx]).show(d);
 
         })
         .on("mouseout", function(d) {
