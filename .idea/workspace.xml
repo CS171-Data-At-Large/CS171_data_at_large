@@ -4,10 +4,7 @@
     <bookmark url="file://$PROJECT_DIR$/js/viz/timeToResolveVis.js" description=".style(&quot;fill&quot;, vis.colorScale(vis.data[3].Time))" line="321" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="663ed40f-7050-4c53-b973-41400f10bb6e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-    </list>
+    <list default="true" id="663ed40f-7050-4c53-b973-41400f10bb6e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -23,8 +20,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="257">
-              <caret line="602" column="71" lean-forward="false" selection-start-line="602" selection-start-column="71" selection-end-line="602" selection-end-column="71" />
+            <state relative-caret-position="200">
+              <caret line="599" column="82" lean-forward="false" selection-start-line="599" selection-start-column="41" selection-end-line="599" selection-end-column="82" />
               <folding />
             </state>
           </provider>
@@ -335,12 +332,12 @@
       <workItem from="1512523787217" duration="8000" />
       <workItem from="1512715363159" duration="10663000" />
       <workItem from="1512763819006" duration="998000" />
-      <workItem from="1512790552638" duration="6178000" />
+      <workItem from="1512790552638" duration="6216000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="84153000" />
+    <option name="totallyTimeSpent" value="84191000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -600,8 +597,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="257">
-          <caret line="602" column="71" lean-forward="false" selection-start-line="602" selection-start-column="71" selection-end-line="602" selection-end-column="71" />
+        <state relative-caret-position="200">
+          <caret line="599" column="82" lean-forward="false" selection-start-line="599" selection-start-column="41" selection-end-line="599" selection-end-column="82" />
           <folding />
         </state>
       </provider>
